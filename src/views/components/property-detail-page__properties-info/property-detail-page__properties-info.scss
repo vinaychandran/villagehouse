@@ -1,0 +1,93 @@
+.property-detail__info {
+    margin-bottom: 4.6rem;
+
+    @include min-sm {
+        margin-bottom: 5.1rem;
+    }
+
+    h4 {
+        @include typography($font-heading, $fontweight-bold, 1.8rem, 1.28);
+        margin-top: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        @include typography($font-main, $fontweight-light, 1.6rem, 3rem);
+        color: $text-color-primary;
+        display: flex;
+        flex-direction: column;
+
+        @include min-sm {
+            flex-direction: row;
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        .menu {
+            font-weight: fontWeight(medium);
+            width: 100%;
+            position: relative;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            border-right: solid 1rem color(c-white);
+            flex: 0 0 auto;
+
+            @include min-sm {
+                width: 27.31rem;
+            }
+        }
+
+        .menu-text {
+            position: relative;
+            width: 27.31rem;
+            &.hidden {
+                color: transparent;
+            }
+
+            &:after {
+                display: none;
+                content: "";
+                position: absolute;
+                bottom: .5rem;
+                border: .1rem dashed $text-color-gray-blur;
+                opacity: 0.5;
+                width: 100%;
+                margin-left: .6rem;
+
+                @include min-sm {
+                    display: inline;
+                }
+            }
+        }
+
+        // .menu-info {
+        //     position: relative;
+
+        //     &:after {
+        //         display: none;
+        //         content: "";
+        //         position: absolute;
+        //         bottom: .5rem;
+        //         left: -100%;
+        //         border: .1rem dashed $text-color-gray-blur;
+        //         opacity: 0.5;
+        //         width: 100%;
+        //         margin-left: .6rem;
+
+        //         @include min-sm {
+        //             display: inline;
+        //         }
+        //     }
+        // }
+    }
+    &__menu {
+        margin-bottom: 1.5rem;
+
+        @include min-sm {
+            margin-bottom: 0;
+        }
+    }
+}

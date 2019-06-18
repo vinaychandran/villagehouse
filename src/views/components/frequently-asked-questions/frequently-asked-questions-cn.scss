@@ -1,0 +1,122 @@
+.freq-aq {
+    &__title {
+        h2 {
+            margin: 4rem 0 3rem 0;
+            @include typography($font-heading, $fontweight-bold, 4.2rem, 4.4rem);
+            color: $text-color-blue;
+            text-align: center;
+        }
+    }
+
+    &__first-content {
+        &__item {
+            padding-top: 3.4rem;
+            background-image: url('../images/tick.png');
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+
+        h3 {
+            color: $text-color-blue;
+            text-align: center;
+            margin-top: 0;
+            @include typography($font-main, $fontweight-bold, 2.4rem, 2.64rem);
+        }
+
+        &__upto {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__second-content {
+        &__img {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 7rem;
+        }
+
+        img {
+            height: 7.8rem;
+            display: inline-block;
+
+            @include min-sm {
+                width: 100%;
+                height: initial;
+            }
+        }
+
+        p {
+            margin: 0 0 1rem;
+            text-align: center;
+
+            @include min-sm {
+                text-align: left;
+            }
+        }
+    }
+
+    &__third-content {
+        background-color: $bg-color-gray-26;
+        border-radius: 1.5rem;
+        margin: 3rem -#{$gutter-xs} 0;
+        padding: 5rem 2rem 2rem 2rem;
+        text-align: center;
+        width: calc(100% + 2*#{$gutter-xs});
+
+        @include min-sm {
+            margin: 3rem -#{$gutter-md} 0;
+            width: calc(100% + 2*#{$gutter-md});
+            padding: 2rem;
+        }
+
+        &__item {
+            width: 100%;
+            margin-bottom: 2.4rem;
+            text-align: center;
+
+            @include min-sm {
+                width: 25%;
+                margin-bottom: 0;
+            }
+        }
+
+        img {
+            height: 8.9rem;
+            display: inline-block;
+        }
+    }
+}
+
+.faq__addition-content {
+    margin-top: 3rem;
+
+    &__item {
+        text-align: right;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+.hightlight-content {
+    background: $bg-color-yellow-9;
+    border-radius: 1.5rem 0 1.5rem 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+
+    h2 {
+        margin: 0;
+        text-align: center;
+        color: $text-color-black;
+        @include typography($font-heading, $fontweight-bold, 2.6rem, 3.8rem);
+
+        @include min-sm {
+            font-size: 2.7rem;
+        }
+    }
+
+    p {
+        color: $text-color-black;
+    }
+}

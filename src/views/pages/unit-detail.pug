@@ -1,0 +1,24 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - Unit Detail
+
+block basicSeo
+  meta(name='description' content='Contact page')
+  meta(name='keywords', content='contact, page')
+  meta(name='author' content='')
+
+block content
+
+  //- Desktop page
+  section.page.unit-detail__page(data-sticky-container).content-page
+    .container-fluid
+        include ../components/advertise-banner/advertise-banner.pug
+    include ../components/sibling-bar-header/sibling-bar-header
+    .container-fluid
+      include ../components/unit-detail-page__slider-and-text/unit-detail-page__slider-and-text.pug 
+      include ../components/property-detail-page__properties-info/property-detail-page__properties-info.pug 
+    include ../components/building-detail-block/building-detail-block
+    .container-fluid
+      include ../components/property-detail-page__properties-map/property-detail-page__units-map.pug 
+  include ../components/near-properties/near-properties.pug

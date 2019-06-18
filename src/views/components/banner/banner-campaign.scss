@@ -1,0 +1,242 @@
+.banner-campaign {
+    display: block;
+    position: relative;
+    background-image: url('../images/bg_mv_sp.jpg');
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: cover;
+
+    &:after {
+        content: "";
+        width: 52%;
+        height: 0;
+        padding-bottom: 74%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background: url('../images/img_mv_sp.png') no-repeat right bottom;
+        background-size: cover;
+
+        @include min-sm {
+            display: none;
+        }
+    }
+
+    @include min-sm {
+        background-image: url('../images/bg_mv_pc.jpg');
+        background-size: contain;
+    }
+
+    .container-fluid {
+        position: relative;
+        height: 106vw;
+        padding: 8.5vw 6.93vw;
+        display: flex;
+        flex-direction: column;
+
+        @include min-sm {
+            height: auto;
+            padding: 94px 0 0;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        color: color(c-yellow-5);
+        text-shadow: .4rem .4rem .7rem rgba(0, 0, 0, 0.5);
+        margin: 0;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        z-index: 10;
+
+        @include min-sm {
+            position: absolute;
+            top: 4vw;
+            left: 0;
+            width: 61%;
+            @include typography($font-heading, $fontweight-bold, 4rem, 4.8rem);
+        }
+
+        @include min-md {
+            top: 65px;
+        }
+
+        &__text01 {
+            @include typography($font-heading, $fontweight-bold, 4.8vw, 3.5rem);
+            
+            @include min-sm {
+                font-size: 3.2vw;
+            }
+
+            @include min-md {
+                font-size: 4rem;
+            }
+        }
+
+        &__box {
+            display: flex;
+            margin: 1vw 0 3vw;
+
+            @include min-sm {
+                margin: 2.5vw 0 3vw;
+            }
+
+            @include min-md {
+                margin: 1.5rem 0 3rem;
+            }
+
+            &>span {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        &__text02 {
+            width: 8vw;
+            font-size: 6vw;
+            @include typography($font-heading, $fontweight-bold, 6vw, 1);
+
+            @include min-sm {
+                width: 5vw;
+                font-size: 4vw;
+            }
+
+            @include min-md {
+                width: 5rem;
+                font-size: 4.5rem;
+            }
+        }
+
+        &__text03 {
+            letter-spacing: -0.04em;
+            @include typography($font-heading, $fontweight-bold, 18vw, 3.5rem);
+
+            @include min-sm {
+                font-size: 11vw;
+            }
+
+            @include min-md {
+                font-size: 13rem;
+            }
+        }
+
+        &__text04 {
+            padding-top: 4vw;
+            font-size: 10.2vw;
+            white-space: nowrap;
+            @include typography($font-heading, $fontweight-bold, 10.2vw, 3.5rem);
+
+            @include min-sm {
+                padding-top: 2.6vw;
+                font-size: 5vw;
+            }
+
+            @include min-md {
+                font-size: 7rem;
+            }
+        }
+
+        &__text05 {
+            white-space: nowrap;
+            letter-spacing: -0.04em;
+            @include typography($font-heading, $fontweight-bold, 8.5vw, 3.5rem);
+
+            @include min-sm {
+                font-size: 6vw;
+            }
+
+            @include min-md {
+                font-size: 6rem;
+            }
+        }
+    }
+
+    &__content {
+        position: relative;
+        width: 100%;
+        padding-top: 1.3vw;
+
+        @include min-sm {
+            float: left;
+            padding-top: 20%;
+            width: auto;
+            max-width: 55%;
+        }
+
+        @include min-md {
+            padding-top: 23%;
+        }
+
+        .campaign-btn--enquiry {
+            z-index: 10;
+        }
+
+        p {
+            position: relative;
+            color: color(c-white);
+            letter-spacing: -0.04em;
+            line-height: 1.5;
+            margin: 1.3rem 0 1rem;
+            font-size: 3.6vw;
+            width: 78%;
+            padding: 3.6vw 1vw;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 0.7rem;
+                background: url('../images/line_wave.png') no-repeat left top;
+                background-size: contain;
+            }
+
+            &:before {
+                top: 0;
+            }
+
+            &:after {
+                bottom: 0;
+            }
+
+
+            @include min-sm {
+                margin-top: 4.2vw;
+                padding: 3vw .7rem;
+                font-size: 1.9vw;
+                width: 100%;
+            }
+
+            @include min-md {
+                margin-top: 2.5rem;
+                padding: 2.9rem .7rem;
+                font-size: 2.4rem;
+            }
+        }
+
+        &--xs {
+            @include min-sm {
+                display: none;
+            }
+        }
+    }
+
+    &__image {
+        display: none;
+        float: right;
+        width: 46%;
+
+        @include min-sm {
+            display: block;
+        }
+
+        img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+            border: 0;
+        }
+    }
+}

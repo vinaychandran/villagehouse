@@ -1,0 +1,109 @@
+section.filter-dropdown
+    .filter-dropdown__wrapper
+        button#filterDropdownRoomtypeBtn.btn-default.filter-dropdown__btn() Room Type
+            span.icon-arrow
+        ul#filterDropdownRoomtypeList.filter-dropdown__list
+            li
+                a(href="javascript:void(0)") All
+            li
+                label(for="roomtype3DK")
+                    input#roomtype3DK(type="checkbox", name="roomtype3DK", data-value="3DK", data-checkbox-type="roomTypes")
+                    | 3DK
+            li
+                label(for="roomtype2K")
+                    input#roomtype2K(type="checkbox", name="roomtype2K", data-value="2K", data-checkbox-type="roomTypes")
+                    | 2K
+            li
+                label(for="roomtype2DK")
+                    input#roomtype2DK(type="checkbox", name="roomtype2DK", data-value="2DK", data-checkbox-type="roomTypes")
+                    | 2DK
+            li
+                label(for="roomtype2LDK")
+                    input#roomtype2LDK(type="checkbox", name="roomtype2LDK", data-value="2LDK", data-checkbox-type="roomTypes")
+                    | 2LDK
+            li
+                label(for="roomtype1DK")
+                    input#roomtype1DK(type="checkbox", name="roomtype1DK", data-value="1DK", data-checkbox-type="roomTypes")
+                    | 1DK
+            li
+                label(for="roomtype1LDK")
+                    input#roomtype1LDK(type="checkbox", name="roomtype1LDK", data-value="1LDK", data-checkbox-type="roomTypes")
+                    | 1LDK
+            li
+                label(for="roomtype3K")
+                    input#roomtype3K(type="checkbox", name="roomtype3K", data-value="3K", data-checkbox-type="roomTypes")
+                    | 3K
+            li
+                label(for="roomtype1R")
+                    input#roomtype1R(type="checkbox", name="roomtype1R", data-value="1R", data-checkbox-type="roomTypes")
+                    | 1R
+    .filter-dropdown__wrapper
+        button#filterDropdownRoomsizeBtn.btn-default.filter-dropdown__btn Room Size
+            span.icon-arrow
+        ul#filterDropdownRoomsizeList.filter-dropdown__list
+            li
+                a(href="javascript:void(0)") All
+            li
+                label(for="roomsizeLess30")
+                    input#roomsizeLess30(type="checkbox", name="roomsizeLess30", data-value-min="0", data-value-max="30", data-value="168c0d0be5754c47baaea3922efe56e8", data-checkbox-type="roomSizes")
+                    | Less than 30 m²
+            li
+                label(for="roomsize30to40")
+                    input#roomsize30to40(type="checkbox", name="roomsize30to40", data-value-min="30", data-value-max="40", data-value="a784a874ef824d73acb38fd490811b4b", data-checkbox-type="roomSizes")
+                    | 30 m² ~ 40 m² 
+            li
+                label(for="roomsize40to50")
+                    input#roomsize40to50(type="checkbox", name="roomsize40to50", data-value-min="40", data-value-max="50", data-value="e9331da22d9349018a91714be1c7a2d0", data-checkbox-type="roomSizes")
+                    | 40 m² ~ 50 m² 
+            li
+                label(for="roomsize50more")
+                    input#roomsize50more(type="checkbox", name="roomsize50more", data-value-min="50", data-value-max="", data-value="96e8848a497a456680d4dab981252825", data-checkbox-type="roomSizes")
+                    | 50 m² or more 
+    .filter-dropdown__wrapper
+        button#filterDropdownRentBtn.btn-default.filter-dropdown__btn Rent
+            span.icon-arrow
+        ul#filterDropdownRentList.filter-dropdown__list
+            li
+                a(href="javascript:void(0)") All
+            li
+                label(for="rentLess30000")
+                    input#rentLess30000(type="checkbox", name="rentLess30000", data-value-min="0", data-value-max="30000", data-value="beddef7507c44816872ba841bdd802b2", data-checkbox-type="roomPrices")
+                    | Less than ¥30,000 
+            li
+                label(for="rent30000to40000")
+                    input#rent30000to40000(type="checkbox", name="rent30000to40000", data-value-min="30000", data-value-max="40000", data-value="b1bb67771a034beebf97c126250c9d50", data-checkbox-type="roomPrices")
+                    | ¥30,000 ~ ¥40,000
+            li
+                label(for="rent40000to50000")
+                    input#rent40000to50000(type="checkbox", name="rent40000to50000", data-value-min="40000", data-value-max="50000", data-value="62e6d5ca063e4a4482b8ddcca2ff19d6", data-checkbox-type="roomPrices")
+                    | ¥40,000 ~ ¥50,000
+            li
+                label(for="rent50000more")
+                    input#rent50000more(type="checkbox", name="rent50000more", data-value-min="50000", data-value-max="", data-value="01644c07683e45afac08a701fe69ccc2", data-checkbox-type="roomPrices")
+                    | ¥50,000 or more 
+    .filter-dropdown__wrapper
+        button#filterDropdownOptionsBtn.btn-default.filter-dropdown__btn Options
+            span.icon-arrow
+        ul#filterDropdownOptionsList.filter-dropdown__list
+            li
+                a(href="javascript:void(0)") All
+            li
+                label(for="optionElevator")
+                    input#optionElevator(type="checkbox", name="optionElevator", data-value="Elevator", data-checkbox-type="options")
+                    | Elevator
+            li
+                label(for="optionsParking")
+                    input#optionsParking(type="checkbox", name="optionsParking", data-value="Parking", data-checkbox-type="options")
+                    | Parking
+            li
+                label(for="optionsPet")
+                    input#optionsPet(type="checkbox", name="optionsPet", data-value="Pet", data-checkbox-type="options")
+                    | Pet
+            li
+                label(for="optionsAvailable")
+                    input#optionsAvailable(type="checkbox", name="optionsAvailable", data-value="Available", data-checkbox-type="options")
+                    | Available
+            input#optionText(type="hidden", name="optionText", value="Option Text")
+            input#optionMultipleText(type="hidden", name="optionMulText", value="Option Multiple Text")
+                
+

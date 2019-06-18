@@ -1,0 +1,19 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - home
+
+block basicSeo
+  meta(name='description' content='home page')
+  meta(name='keywords', content='home, page')
+  meta(name='author' content='')
+
+block content
+
+  //- Desktop page
+  section.page.home__page
+    include ../components/banner/banner-campaign.pug
+    include ../components/campaign-benefit/campaign-benefit.pug
+    include ../components/campagin-detail/campagin-detail.pug
+    include ../components/near-properties/campaign-nearby-properties.pug
+    include ../components/campaign-telephone/campaign-telephone.pug

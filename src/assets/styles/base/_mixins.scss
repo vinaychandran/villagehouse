@@ -1,0 +1,203 @@
+// Breakpoint
+@mixin min-xl {
+    @media screen and (min-width: #{breakpoints(xl)}) {
+        @content;
+    }
+}
+
+@mixin min-lg {
+    @media screen and (min-width: #{breakpoints(lg)}) {
+        @content;
+    }
+}
+
+@mixin min-md {
+    @media (min-width: #{breakpoints(md)}) {
+        @content;
+    }
+}
+
+@mixin min-sm {
+    @media (min-width: #{breakpoints(sm)}) {
+        @content;
+    }
+}
+
+@mixin min-xs {
+    @media screen and (min-width: #{breakpoints(xs)}) {
+        @content;
+    }
+}
+
+@mixin min-xxs {
+    @media screen and (max-width: #{breakpoints(xxs)}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: #{breakpoints(lg) + 1px}) {
+        @content;
+    }
+}
+
+@mixin device {
+    @media screen and (max-width: #{breakpoints(lg)}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{breakpoints(sm)}) and (max-width: #{breakpoints(lg)}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: #{breakpoints(sm) - 1px}) {
+        @content;
+    }
+}
+
+@mixin not-mobile {
+    @media screen and (min-width: #{breakpoints(sm)}) {
+        @content;
+    }
+}
+
+@mixin print {
+    @media print {
+        @content;
+    }
+}
+
+@mixin landscape {
+    @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin portrait {
+    @media screen and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin ie {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        @content;
+    }
+}
+
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin clearfix() {
+
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin scale($value) {
+    -webkit-transform: scale($value);
+    -moz-transform: scale($value);
+    -ms-transform: scale($value);
+    -o-transform: scale($value);
+    transform: scale($value);
+}
+
+@mixin scale2D($value, $value2) {
+    -webkit-transform: scale($value, $value2);
+    -moz-transform: scale($value, $value2);
+    -ms-transform: scale($value, $value2);
+    -o-transform: scale($value, $value2);
+    transform: scale($value, $value2);
+}
+
+@mixin translateX($left) {
+    -webkit-transform: translateX($left);
+    -moz-transform: translateX($left);
+    -ms-transform: translateX($left);
+    -o-transform: translateX($left);
+    transform: translateX($left);
+}
+
+@mixin translateY($top) {
+    -webkit-transform: translateY($top);
+    -moz-transform: translateY($top);
+    -ms-transform: translateY($top);
+    -o-transform: translateY($top);
+    transform: translateY($top);
+}
+
+@mixin translateZ($right) {
+    -webkit-transform: translateZ($right);
+    -moz-transform: translateZ($right);
+    -ms-transform: translateZ($right);
+    -o-transform: translateZ($right);
+    transform: translateZ($right);
+}
+
+@mixin translate2D($x, $y) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+@mixin translate3D($x, $y, $z) {
+    -webkit-transform: translate3d($x, $y, $z);
+    -moz-transform: translate3d($x, $y, $z);
+    -ms-transform: translate3d($x, $y, $z);
+    -o-transform: translate3d($x, $y, $z);
+    transform: translate3d($x, $y, $z);
+}
+
+@mixin rotate($deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin typography($ff, $fw, $fz, $lh) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+}
+
+@mixin placeholder() {
+    &.placeholder {
+        @content;
+    }
+    &::placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-ms-input-placeholder {
+        @content;
+    }
+}

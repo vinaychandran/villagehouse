@@ -1,0 +1,30 @@
+extends ./layouts/master.pug
+
+block title
+  title My Page - Index
+
+block content
+  - var pages = { homePage: '/homepage', campaignPage: '/campagin-page', searchResultPage: '/search-result-page', propertyDetaiPage: '/property-detail-page', unitDetail: '/unit-detail', companyInformation: '/company-information-page', thankYouPage: '/thank-you-page', faqPage: '/faq-page', privacyPolicyPage: '/privacy-policy-page', shortListPage: '/shortlist-card-page', offlinePage: '/offline-page', bankSuccess: '/bank-success', bankFailed: '/bank-failed', loginWithNote: '/login-with-note'}
+
+  //- Desktop page
+  section.page.home__page
+    h1.page__title # Index page
+
+    ul(style="list-style: disc; padding-left: 4rem; margin: 4rem 0")
+      each val, index in pages
+        li
+          a(href=val)= index
+      li 
+        a(href="javascript:void(0)", data-micromodal-trigger="modalSubscribeForm") subscribe modal
+      li 
+        a(href="javascript:void(0)", data-micromodal-trigger="modalPromotion") promotion modal
+      li 
+        a(href="javascript:void(0)", data-micromodal-trigger="modalSubscribeFormWithImage") subscribe modal with image
+      li 
+        a(href="javascript:void(0)", data-micromodal-trigger="modalLogin") login modal
+
+  include ./components/modal-request-form/modal-request-form.pug
+  include ./components/subscribe-modal/subscribe-modal.pug
+  include ./components/subscribe-modal/subscribe-modal-with-image.pug
+  include ./components/promote-modal/promote-modal.pug
+  include ./components/login-modal/login-modal.pug

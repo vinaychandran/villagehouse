@@ -1,0 +1,62 @@
+//- Master layout
+
+doctype html
+html(lang='jp')
+  head
+
+    //- Meta
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+    meta(name='msapplication-TileColor', content='#0E0E0E')
+    meta(name='theme-color', content='#0E0E0E')
+
+    //- SEO
+
+    //- Basic Seo
+    block basicSeo
+      meta(name='description' content='Index page')
+      meta(name='keywords', content='index, page')
+      meta(name='author' content='')
+
+    //- Twitter
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:site', content='')
+    meta(name='twitter:image', content='')
+    meta(name='twitter:description', content='')
+
+    //- Facebook
+    meta(property='og:url', content='')
+    meta(property='og:title', content='')
+    meta(property='og:description', content='')
+    meta(property='og:image', content='')
+    meta(property='og:type', content='website')
+
+
+    //- Favicons
+    link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
+
+    //- Fonts
+    //- link(href="https://fonts.googleapis.com/css?family=Quicksand", rel='stylesheet')
+
+
+
+    //- Title
+    block title
+      title Your project!
+
+  body
+    //- header
+    include ../components/header/header-bank.pug
+
+    //- block content
+    block content
+
+    //- block scripts
+    block scripts
+
+    script(id="ze-snippet", src="https://static.zdassets.com/ekr/snippet.js?key=a0d065e1-295a-4de9-89f4-106bb253506a" defer)
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDo8ICXyf-BwI1tBv-PJxvHgm-0wUbTLAY&libraries=places" defer)
+    script(src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js" defer)
+    

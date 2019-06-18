@@ -1,0 +1,12 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - Thank You Page
+
+block basicSeo
+  meta(name='description' content='thank you page')
+  meta(name='keywords', content='thank you, page')
+  meta(name='author' content='')
+
+block content
+    include ../components/thank-you/thank-you.pug

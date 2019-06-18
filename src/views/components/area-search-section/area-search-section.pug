@@ -1,0 +1,72 @@
+section.area-search
+    .area-search__search-block
+        ul
+            li
+                a#areaSearchBtn.anchor-btn(href="javascript:void(0)")
+                    span.icon-location
+                    | Area
+            li
+                a.anchor-btn(href="#")
+                    span.icon-map
+                    | Map
+            li
+                a#trainlineSearchBtn.anchor-btn(href="javascript:void(0)")
+                    span.icon-trainline
+                    | Trainline
+            li.area-search__search-block__form__area.autocomplete-list-wrapper
+                .field--wrapper
+                    input#area_trainline_autocomplete.autocomplete-input(type="text", placeholder="Enter area or trainline", name="area_trainline_autocomplete", autocomplete="off")
+                    .autocomplete-list
+                        a.is-property(href='/en-us/sanoyoneyama-sano-shi-tochigi-kanto/')
+                            span
+                                strong S
+                                | anoyoneyama
+                            p Sano-shi, Tochigi-ken
+                        a.is-property(href='/en-us/shikadani-katsuyama-shi-fukui-hokuriku/')
+                            span
+                                strong S
+                                | hikadani
+                            p Katsuyama-shi, Fukui-ken
+                        a.is-property(href='/en-us/souwa-koga-shi-ibaraki-kanto/')
+                            span
+                                strong S
+                                | ouwa
+                            p Koga-shi, Ibaraki-ken
+                        a.is-trainline(href='https://dev.villagehouse.jp/search-results/?type=Trainstation&codes=9952105')
+                            span
+                                strong S
+                                | hiyakusho-mae Station
+                            p Hokkaido, 040-0064
+                        a.is-trainStation(href='https://dev.villagehouse.jp/search-results/?type=Trainstation&codes=1141407')
+                            span
+                                strong S
+                                | himoyamamura Station
+                            p Nagano-ken, 395-0803
+                        a.is-trainStation(href='https://dev.villagehouse.jp/search-results/?type=Trainstation&codes=9952105')
+                            span
+                                strong S
+                                | hiyakusho-mae Station
+                            p Hokkaido, 040-0064
+                        a.is-location(href='https://dev.villagehouse.jp/search-results/?type=City&codes=11002')
+                            span
+                                strong Sapporo-shi
+                        a.is-location(href='https://dev.villagehouse.jp/search-results/?type=City&codes=282219')
+                            span
+                                strong Sasayama-shi
+                        a.is-location(href='https://dev.villagehouse.jp/search-results/?type=City&codes=242152')
+                            span
+                                strong Shima-shi
+                        a.is-location(href='https://dev.villagehouse.jp/search-results/?type=City&codes=92142')    
+                            span
+                                strong Sak  ura-shi  
+
+            li.area-search__search-block__form__submit-btn
+                .field--wrapper
+                    button.modal--btn-submit
+                        span.icon-search
+                        | Search
+    .area-search__tick-mark.container-fluid
+        ul 
+            li 
+                span Village House, rents starting from ¥20,000
+include ../area-search-modal/area-search-modal.pug

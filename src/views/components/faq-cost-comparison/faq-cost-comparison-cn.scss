@@ -1,0 +1,125 @@
+.cost-comparison {
+    text-align: center;
+    padding-top: 2rem;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 3.5rem;
+
+        @include min-sm {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: $text-color-blue;
+            @include typography($font-main, $fontweight-medium, 2.4rem, 2.64rem);
+        }
+    
+        h4 {
+            margin: 0;
+            color: $text-color-black-5;
+            @include typography($font-main, $fontweight-medium, 2.2rem, 2.42rem);
+        }
+    }
+
+    &__sub-title {
+        margin-bottom: 2.5rem;
+        @include min-sm {
+            text-align: right;
+            margin-bottom: 0;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        p {
+            margin-bottom: 0;
+            @include typography($font-main, $fontweight-regular, 1.6rem, 2.3rem);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    &__chart {
+        margin-top: 0;
+
+        @include min-sm {
+            margin-top: 3.5rem;
+        }
+        &__image {
+            margin-bottom: 1rem;
+            @include min-sm {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        text-align: center;
+        @include typography($font-main, $fontweight-bold, 1.2rem, 1.4rem);
+        td {
+            display: table-cell;
+            padding: .2rem;
+            border: .1rem solid $text-color-black;
+        }
+        tr {
+            td:first-child {
+                background: #eeeeee;
+                @include min-sm {
+                    background: none;
+                }
+            }
+
+            td:last-child {
+                background: #ffa31a;
+                @include min-sm {
+                    background: none;
+                }
+            }
+
+            td[colspan="5"] {
+                background: none;
+                border: none;
+            }
+
+            td[colspan="3"],
+            td[colspan="2"] {
+                background: #1a8cff;
+                border: none;
+            }
+
+            @include min-sm {
+                &:first-child td {
+                    background: #eeeeee;
+                }
+
+                &:last-child td {
+                    border: none;
+
+                    &:not([colspan="7"]) {
+                        background: #1a8cff;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    &__note {
+        @include min-sm {
+            text-align: left;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

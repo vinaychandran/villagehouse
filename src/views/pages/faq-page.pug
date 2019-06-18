@@ -1,0 +1,23 @@
+extends ../layouts/master.pug
+
+block title
+	title My Page - FAQ
+
+block basicSeo
+	meta(name='description' content='faq page')
+	meta(name='keywords', content='faq, page')
+	meta(name='author' content='')
+
+block content
+
+	//- Desktop page
+	section.page
+		include ../components/faq-banner/faq-banner.pug
+		include ../components/frequently-asked-questions/frequently-asked-questions.pug
+		include ../components/faq-cost-comparison/faq-cost-comparison.pug
+		include ../components/faq-moving-support/faq-moving-support.pug
+		include ../components/overall-procedure/overall-procedure.pug
+		include ../components/faq-questions-answers/faq-questions-answers.pug
+		include ../components/rental-support/rental-support.pug
+		
+		

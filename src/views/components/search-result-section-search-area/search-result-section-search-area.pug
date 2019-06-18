@@ -1,0 +1,64 @@
+.search-result-section-search-area
+    include ../search-result-page__dropdown-filter/search-result-page__dropdown-filter.pug
+    .search-result-section-search-area__block
+        h2.search-result-section-search-area__title Search Results
+        .search-result-section-search-area__filter
+            .search-result-section-search-area__filter__btn-group
+                .search-result-section-search-area__filter__btn-group__btn-area
+                    button#areaSearchBtn
+                        span.icon-location
+                        | Area
+                .search-result-section-search-area__filter__btn-group__btn-station
+                    button#trainlineSearchBtn
+                        span.icon-trainline
+                        | Trainline
+                .search-result-section-search-area__filter__btn-group__btn-search-mobile
+                    button
+                        span.icon-search
+                        | Search
+            .search-result-section-search-area__filter__input-group
+                form.search-result-section-search-area__filter__input-group__form.autocomplete-list-wrapper(action="/", autocompelete="off")
+                    .search-result-section-search-area__filter__input-group__form__input-box
+                        input.autocomplete-input.form-control(type="text", name="properties", placeholder="Enter area or trainline")
+                    button.search-result-section-search-area__filter__input-group__form__input-submit(type="submit")
+                        span.icon-search
+                    //- .autocomplete-list(style='display: block;')
+                        //- a.is-property(href='/en-us/sanoyoneyama-sano-shi-tochigi-kanto/')
+                        //-     span
+                        //-         strong S
+                        //-         | anoyoneyama
+                        //-     p Sano-shi, Tochigi-ken
+                        //- a.is-property(href='/en-us/shikadani-katsuyama-shi-fukui-hokuriku/')
+                        //-     span
+                        //-         strong S
+                        //-         | hikadani
+                        //-     p Katsuyama-shi, Fukui-ken
+                        //- a.is-property(href='/en-us/souwa-koga-shi-ibaraki-kanto/')
+                        //-     span
+                        //-         strong S
+                        //-         | ouwa
+                        //-     p Koga-shi, Ibaraki-ken
+                        //- a.is-trainStation(href='https://dev.villagehouse.jp/search-results/?type=Trainstation&codes=1141407')
+                        //-     span
+                        //-         strong S
+                        //-         | himoyamamura Station
+                        //-     p Nagano-ken, 395-0803
+                        //- a.is-trainStation(href='https://dev.villagehouse.jp/search-results/?type=Trainstation&codes=9952105')
+                        //-     span
+                        //-         strong S
+                        //-         | hiyakusho-mae Station
+                        //-     p Hokkaido, 040-0064
+                        //- a.is-location(href='https://dev.villagehouse.jp/search-results/?type=City&codes=11002')
+                        //-     span
+                        //-         strong Sapporo-shi
+                        //- a.is-location(href='https://dev.villagehouse.jp/search-results/?type=City&codes=282219')
+                        //-     span
+                        //-         strong Sasayama-shi
+                        //- a.is-location(href='https://dev.villagehouse.jp/search-results/?type=City&codes=242152')
+                        //-     span
+                        //-         strong Shima-shi
+                        //- a.is-location(href='https://dev.villagehouse.jp/search-results/?type=City&codes=92142')    
+                        //-     span
+                        //-         strong Sak  ura-shi
+
+                        include ../area-search-modal/area-search-modal.pug      

@@ -1,0 +1,217 @@
+@charset 'UTF-8';
+// breakpoints
+$grid-breakpoints: (
+    xxs: 360px,
+    xs: 481px,
+    sm: 768px,
+    smplus: 769px,
+    md: 992px,
+    lg: 1025px,
+    xl: 1200px
+); 
+
+// fonts
+$font-weight: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    bold: 700,
+    heavy: 900
+);
+
+$fonts: (
+    main: ('Roboto', Arial, sans-serif),
+    heading: ('Kreon', 'Ubuntu', sans-serif),
+    content: ('Roboto', Arial, sans-serif),
+    icomoon: ('icomoon'),
+    fontawesome: ('Fontawesome')
+);
+
+$font-main: fonts(main);
+$font-heading: fonts(heading);
+$font-icomoon: fonts(icomoon);
+$font-fontawesome: fonts(fontawesome);
+
+$fontweight-light: fontWeight(light);
+$fontweight-regular: fontWeight(regular);
+$fontweight-medium: fontWeight(medium);
+$fontweight-bold: fontWeight(bold);
+$fontweight-heavy: fontWeight(heavy);
+
+$fz-root: 62.5%; // root font-size, DO NOT CHANGE
+$gutter: 2rem;
+$gutter-xs: 1.5rem;
+$gutter-md: 2rem;
+
+// colors
+$colors: (
+    c-white: #fff,
+    c-white-blur: #f5f6f7,
+    c-white-blur-2: #f5f5f5,
+    c-white-blur-3: #e9f1f8,
+    c-white-blur-4: #f4f4f3,
+    c-white-blur-5: #eef2f4,
+    c-white-blur-6: #f3f3f3,
+    c-white-blur-7: #d3dde2,
+    c-white-blur-8: #efefef,
+    c-blue: #0089ce,
+    c-blue-2: #0d8fd0,
+    c-blue-3: #0288d1,
+    c-blue-4: #36ade8,
+    c-blue-5: #337ab7,
+    c-blue-6: #2e6da4,
+    c-blue-7: #0085ca,
+    c-blue-8: #0088cd,
+    c-blue-9: #1993d1,
+    c-blue-10: #3ea5d9,
+    c-blue-11: #0288cf,
+    c-blue-12: #3bb6f7,
+    c-blue-13: #0089CE,
+    c-dark-blue: #003b59,
+    c-dark-blue-navy: #00052e,
+    c-dark-blue-navy-2: #23527c,
+    c-dark-blue-navy-3: #073e5a,
+    c-dark-blue-navy-4: #114561,
+    c-dark-blue-navy-5: #003856,
+    c-dark-blue-navy-6: #003B59,
+    c-dark-blue-navy-7: #286090,
+    c-pink: #ff566b,
+    c-black: #000000,
+    c-black-2: #00062F,
+    c-black-3: #141414,
+    c-black-4: #515151,
+    c-black-5: #333,
+    c-yellow: #f8b62d,
+    c-yellow-2: #f0ad4e,
+    c-yellow-3: #eea236,
+    c-yellow-4: #ebab38,
+    c-yellow-5: #f4b22d,
+    c-yellow-6: #f8b62d,
+    c-yellow-7: #ffaf10,
+    c-yellow-8: #f9b52e,
+    c-yellow-9: #F8B62D,
+    c-gray: #e5ebee,
+    c-gray-1: #ddd,
+    c-gray-2: #98b0bb,
+    c-gray-3: #7594a5,
+    c-gray-4: #cccccc,
+    c-gray-5: #849aa6,
+    c-gray-6: #758d9b,
+    c-gray-7: #b2c5ce,
+    c-gray-8: #8499a5,
+    c-gray-9: #e5e5e5,
+    c-gray-10: #ccc,
+    c-gray-11: #768e9b,
+    c-gray-12: #fdf3df,
+    c-gray-13: #94a5b0,
+    c-gray-14: #e9ecf1,
+    c-gray-15: #7a919d,
+    c-gray-16: #99b1be,
+    c-gray-17: #a6c0ce,
+    c-gray-18: #758c9a,
+    c-gray-19: #97b0bb,
+    c-gray-20: #7594a8,
+    c-gray-23: #d4d4d4,
+    c-gray-21: #e9e9e9,
+    c-gray-22: #D9E2E6,
+    c-gray-24: #99B1BD,
+    c-gray-25: #F2F2F2,
+    c-gray-26: #f4f4f4,
+    c-pink-light: #EBCCD1,
+    c-pink-lighter: #F2DEDE,
+    c-gray-blur: #99b1bd,
+    c-gray-blur-2: #9ab1bc,
+    c-gray-blur-3: #b3c6ce,
+    c-red: #A94442,
+    c-red-2: #e01c24,
+    c-red-3: #db1c24,
+    c-green: #00CEAE,
+);
+// // main-colors:
+$bg-color-primary: color(c-blue);
+$bg-color-primary-white: color(c-white);
+$bg-color-primary-pink: color(c-pink);
+$bg-color-black: color(c-black);
+$bg-color-yellow-2: color(c-yellow-2);
+$bg-color-yellow-3: color(c-yellow-3);
+$bg-color-yellow-6: color(c-yellow-6);
+$bg-color-yellow-9: color(c-yellow-9);
+$bg-color-blue-3: color(c-blue-3);
+$bg-color-white-blur: color(c-white-blur);
+$bg-color-white-blur-2: color(c-white-blur-2);
+$bg-color-white-blur-3: color(c-white-blur-3);
+$bg-color-green: color(c-green);
+$bg-color-gray-26: color(c-gray-26);
+
+$border-color-blue-6: color(c-blue-6);
+$border-color-blue-13: color(c-blue-13);
+$border-color-gray-9: color(c-gray-9);
+$border-color-gray-10: color(c-gray-10);
+$border-color-gray-14: color(c-gray-14);
+$border-color-gray-16: color(c-gray-16);
+$border-color-yellow-8: color(c-yellow-8);
+$border-color-yellow-9: color(c-yellow-9);
+$border-color-gray: color(c-gray);
+$border-color-gray-23: color(c-gray-23);
+$border-color-gray-22: color(c-gray-22);
+$border-color-blue: color(c-blue);
+
+$bg-color-gray-10: color(c-gray-10);
+$bg-color-gray-11: color(c-gray-11);
+$bg-color-gray-12: color(c-gray-12);
+$bg-color-gray-21: color(c-gray-21);
+$bg-color-gray-25: color(c-gray-25);
+$bg-color-gray-26: color(c-gray-26);
+
+$text-color-primary: color(c-dark-blue);
+$text-color-secondary: color(c-white);
+$text-color-black: color(c-black);
+$text-color-black-2: color(c-black-2);
+$text-color-black-3: color(c-black-3);
+$text-color-blue: color(c-blue);
+$text-color-blue-7: color(c-blue-7);
+$text-color-blue-8: color(c-blue-8);
+$text-color-blue-9: color(c-blue-9);
+$text-color-blue-2: color(c-blue-2);
+$text-color-blue-3: color(c-blue-3);
+$text-color-blue-4: color(c-blue-4);
+$text-color-blue-13: color(c-blue-13);
+$text-color-gray-2: color(c-gray-2);
+$text-color-gray-3: color(c-gray-3);
+$text-color-gray-blur: color(c-gray-blur);
+$text-color-gray-blur-2: color(c-gray-blur-2);
+$text-color-gray-5: color(c-gray-5);
+$text-color-gray-6: color(c-gray-6);
+$text-color-gray-7: color(c-gray-7);
+$text-color-gray-8: color(c-gray-8);
+$text-color-gray-13: color(c-gray-13);
+$text-color-gray-15: color(c-gray-15);
+$text-color-yellow-4: color(c-yellow-4);
+$text-color-dark-blue-navy-4: color(c-dark-blue-navy-4);
+$text-color-dark-blue-navy-6: color(c-dark-blue-navy-6);
+$text-color-gray-9: color(c-gray-9);
+$text-color-gray-11: color(c-gray-11);
+$text-color-red-2: color(c-red-2);
+$text-color-gray-24: color(c-gray-24);
+$text-color-black-5: color(c-black-5);
+
+$page-border-radius: .3rem;
+$btn-bg-color-primary: color(c-yellow);
+$btn-bg-color-blue-5: color(c-blue-5);
+
+$btn-text-color-primary: color(c-dark-blue-navy);
+$btn-text-color-blue-navy-2: color(c-dark-blue-navy-2);
+$btn-text-color-blue-navy-3: color(c-dark-blue-navy-3);
+
+$header-border-color: color(c-gray);
+
+$propertyCard-border-color: color(c-gray-4);
+$border-line-solid: 0.1rem solid rgba(0, 59, 89, 0.15);
+
+$modal-box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .5);
+$modal-form-field-color: rgba(0, 59, 89, 0.5);
+$modal-form-field-bg: color(c-white-blur);
+$modal-form-field-inner-shadow: inset .3rem -.3rem .5rem 0 rgba(0, 59, 89, 0.25);
+$modal-form-icon-color: color(c-gray-blur);
+
+$areasearch-placeholder-color: rgba(0,59,89,0.5);

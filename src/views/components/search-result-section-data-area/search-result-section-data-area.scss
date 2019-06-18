@@ -1,0 +1,90 @@
+.search-result-section-data-area {
+    display: flex;
+    width: 100%;
+    position: relative;
+
+    .property-card {
+        height: auto;
+        transition: all 0.4s ease;
+    }
+
+    @include min-md {
+        margin-top: 1rem;
+        height: 70rem;
+    }
+
+    .property-card {
+        &:hover {
+            box-shadow: .1rem .1rem .5rem 0 rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .hide-when-map-loaded {
+        display: none;
+    }
+
+    .property-card__list__load-more-btn {
+        display: flex;
+        justify-content: center;
+        border: .1rem solid $propertyCard-border-color;
+        border-radius: 10rem;
+        margin: .4rem 0 3rem;
+        text-align: center;
+        padding: 1.1rem 0 1.2rem;
+
+        &.hide {
+            display: none;
+        }
+
+        @include min-md {
+            display: none;
+        }
+    }
+
+    .property-card__rooms__list {
+        min-height: 16.4rem;
+        max-height: 18.4rem;
+
+        @include min-md {
+            min-height: 18.4rem;
+            max-height: 20.4rem;
+        }
+    }
+
+    .icon-hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .property-card__list__wrapper {
+        .os-scrollbar-handle {
+        background-image: linear-gradient(color(c-dark-blue-navy-2), color(c-blue-4)) !important;
+        }
+    }
+
+    .geo-not-found {
+        margin: 0;
+        float: left;
+        width: 100%;
+        padding: 7.8rem 2rem 2rem 1.8rem;
+        border: .2rem solid color(c-white-blur-8);
+        text-align: center;
+        background-image: url('../images/geo-no-search.jpg');
+        background-repeat: no-repeat;
+        background-size: 5rem;
+        background-position: center 2rem;
+        transition: all 0.3s ease-in-out;
+
+        &.is-has-geo {
+            // display: none;
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        @include min-md {
+            width: 40rem;
+        }
+    }
+}

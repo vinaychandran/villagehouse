@@ -1,0 +1,16 @@
+.search-result-section-data-area
+    .property-card__list
+        .geo-loading-properties 
+            | Finding Properties 
+        h3.geo-not-found.is-has-geo No Properties Found
+        .property-card__list__wrapper.hide-when-map-loaded
+        .property-card__list__load-more-btn.btn Load more
+        input#textPropertyDetailButton(type="hidden", value="詳細")
+        input#textComingSoon(type="hidden", value="Coming Soon")
+        input#textAvailable(type="hidden", value="Available")
+        input#textUnavailable(type="hidden", value="Unavailable")
+        input#textElevator(type="hidden", value="Elevator")
+        input#textHandicap(type="hidden", value="Handicap Service")
+        input#textParking(type="hidden", value="駐車場・駐輪場 ")
+        input#textPet(type="hidden", value="Pet")
+    include ../map-component/map-component.pug

@@ -1,0 +1,64 @@
+/*
+  EN font
+*/
+@import './base/font-language/jp-JP';
+@import './base/_functions';
+@import './base/_variables-JP';
+@import './base/_mixins';
+@import './base/_fonts';
+@import './base/_global';
+@import './base/_flexboxgrid';
+@import './base/_micromodal';
+@import './base/_lazyload';
+// @import '~slick-carousel/slick/slick';
+// @import '~slick-carousel/slick/slick-theme';
+@import './base/_slick-slider-custom';
+
+
+// Component
+@import '../../views/components/header/header';
+@import '../../views/components/property-card-list/property-card-list.scss';
+@import '../../views/components/property-card/property-card.scss';
+@import '../../views/components/footer/footer';
+@import '../../views/components/shortlist-card/shortlist-card';
+@import '../../views/components/modal-request-form/modal-request-form.scss';
+@import '../../views/components/area-search-section/area-search-section-jp.scss';
+@import '../../views/components/area-search-autocomplete/area-search-autocomplete.scss';
+@import '../../views/components/banner/banner.scss';
+@import '../../views/components/near-properties/near-properties.scss';
+@import '../../views/components/limited-offer/limited-offer.scss';
+@import '../../views/components/search-result-map-svg/search-result-map-svg.scss';
+@import '../../views/components/area-search-modal/area-search-modal.scss';
+@import '../../views/components/experience/experience.scss';
+@import '../../views/components/campagin-detail/campagin-detail.scss';
+@import '../../views/components/banner/banner-campaign.scss';
+@import '../../views/components/campaign-benefit/campaign-benefit.scss';
+@import '../../views/components/search-result-page__dropdown-filter/search-result-page__dropdown-filter.scss';
+
+@import '../../views/components/campaign-telephone/campaign-telephone.scss';
+@import '../../views/components/area-breadcrumb/area-breadcrumb.scss';
+@import '../../views/components/search-result-section/search-result-section.scss';
+@import '../../views/components/property-detail-page__slider-and-text/property-detail-page__slider-and-text.scss';
+@import '../../views/components/search-result-section-search-area/search-result-section-search-area.scss';
+@import '../../views/components/search-result-section-data-area/search-result-section-data-area.scss';
+@import '../../views/components/map-component/map-component.scss';
+@import '../../views/components/property-detail-page__style/property-detail-page__style.scss';
+@import '../../views/components/property-detail-page__properties-info/property-detail-page__properties-info.scss';
+@import '../../views/components/property-detail-page__properties-map/property-detail-page__properties-map.scss';
+@import '../../views/components/advertise-banner/advertise-banner.scss';
+@import '../../views/components/company-information/company-information.scss';
+@import '../../views/components/sibling-bar-header/sibling-bar-header.scss';
+@import '../../views/components/building-detail-block/building-detail-block.scss';
+@import '../../views/components/faq-banner/faq-banner.scss';
+@import '../../views/components/thank-you/thank-you.scss';
+@import '../../views/components/frequently-asked-questions/frequently-asked-questions.scss';
+@import '../../views/components/privacy-policy/privacy-policy.scss';
+@import '../../views/components/faq-moving-support/faq-moving-support.scss';
+@import '../../views/components/overall-procedure/overall-procedure.scss';
+@import '../../views/components/faq-cost-comparison/faq-cost-comparison.scss';
+@import '../../views/components/faq-questions-answers/faq-questions-answers.scss';
+@import '../../views/components/rental-support/rental-support.scss';
+@import '../../views/components/header/header-bank.scss';
+@import '../../views/components/bank/bank.scss';
+@import '../../views/components/login-modal/login-modal.scss';
+

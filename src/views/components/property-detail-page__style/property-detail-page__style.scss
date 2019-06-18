@@ -1,0 +1,61 @@
+.propery-details__buildings {
+    background-color: color(c-gray-12);
+    border-radius: .5rem;
+    margin: 3rem 0;
+    padding: 3rem 0 2rem 0;
+    text-align: center;
+
+    h2 {
+        font-size: 2.8rem;
+        margin-top: 0;
+        margin-bottom: .9rem;
+
+        @include min-sm {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__content {
+        justify-content: center;
+        align-items: flex-end;
+        &__props {
+            margin: 0 0 2.5rem 0;
+            @include typography(fonts(main), fontWeight(bold), 2.2rem, 2.3rem);
+
+            &__room-image {
+                text-align: center;
+                a {
+                    border: solid .1rem $header-border-color;
+                    display: inline-block;
+                    border-radius: .3rem;
+                    padding: 1rem;
+                    background: color(c-white);
+
+                    @include min-sm {
+                        display: block;
+                    }
+                    img {
+                        max-height: 14rem;
+                        margin: 0 auto;
+                    }
+                }
+            }
+
+            &__btn-details {
+                text-align: center;
+                background: $bg-color-primary;
+                margin-top: 1rem;
+                line-height: 4rem;
+                padding: 0 3.5rem;
+                text-decoration: none;
+                color: $text-color-secondary;
+                border-radius: 2.3rem;
+                border: none;
+
+                &:hover {
+                    color: $text-color-secondary;
+                }
+            }
+        }
+    }
+}

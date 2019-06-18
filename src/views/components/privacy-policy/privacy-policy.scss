@@ -1,0 +1,46 @@
+.privacy-policy {
+    padding: 3rem 0;
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 1.4rem;
+        @include typography($font-heading, $fontweight-bold, 3rem, 3.8rem);
+
+        @include min-sm {
+            font-size: 3.5rem;
+            line-height: 4.4rem;
+            margin-bottom: 1.1rem;
+        }
+    }
+
+    &__detail {
+        font-size: 1.4rem;
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        b {
+            @include typography($font-heading, $fontweight-bold, 1.46667rem, 2.3rem);
+        }
+
+        span {
+            @include typography($font-heading, $fontweight-regular, 11pt, 2.3rem);
+        }
+
+        span.spec-text {
+            font-size: 11pt;
+            font-family: $font-main;
+        }
+
+        p.privacy-policy__detail__title {
+            span {
+                font-weight: 700;
+            }
+            
+            &:first-of-type {
+                margin-bottom: 15pt;
+            }
+        }
+    }
+}

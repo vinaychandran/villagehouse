@@ -1,0 +1,49 @@
+.ques-answ {
+    margin-bottom: 3rem;
+    h2 {
+        color: $text-color-blue;
+        margin: 4rem 0 3rem;
+        text-align: center;
+        @include typography($font-heading, $fontweight-bold, 4.2rem, 4.4rem);
+    }
+
+    &__item {
+        color: $text-color-black;
+        background: $bg-color-gray-26;
+        border-radius: 1.5rem;
+        padding: 3rem;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @include min-sm {
+            text-align: left;
+        }
+
+        img {
+            height: 5rem;
+            display: block;
+            margin-top: 0;
+            margin-bottom: 2rem;
+
+            @include min-sm {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__item__questions {
+        padding-top: 1rem;
+        margin-bottom: 2rem;
+        p {
+            color: $text-color-black;
+            @include typography($font-main, $fontweight-bold, 2.4rem, 2.3rem);
+        }
+    }
+
+    &__item__answers {
+        p {
+            margin-bottom: 1rem;
+            color: $text-color-black;
+        }
+    }
+}

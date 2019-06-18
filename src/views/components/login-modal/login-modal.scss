@@ -1,0 +1,149 @@
+.modal__container--login {
+  @include mobile {
+    padding-bottom: unset !important;
+  }
+
+  flex-direction: column;
+
+  &.modal__overlay {
+    padding-top: 0;
+    justify-content: center;
+    align-items: center;
+
+    .modal__container {
+      @include mobile {
+        height: auto;
+        width: 95%;
+      }
+    }
+  }
+
+  .modal__container {
+    padding: 0 0 2rem;
+    border: none;
+    background-color: $bg-color-primary-white;
+    //padding: 1.5rem 1.2rem 2rem;
+  }
+
+  .modal__header {
+    padding: 0 0 .7rem;
+    width: 60rem;
+
+    @include mobile {
+      width: 95%;
+    }
+  }
+
+  .modal__content {
+    padding: 2.5rem 2.7rem .5rem;
+
+    @include mobile {
+      padding: 1.7rem 2rem .5rem;
+    }
+
+    h3 {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+
+      @include mobile {
+        font-size: 2.2rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    .form--wrapper {
+      padding: 2rem 0rem;
+
+      .form__title {
+        color: $bg-color-blue-3 !important;
+      }
+
+      .form__sub-title {
+        color: #707070;
+      }
+
+      .form__submit-btn {
+        margin-bottom: unset;
+        padding-top: 2rem;
+        text-align: center;
+        width: 100%;
+      }
+
+      .field--wrapper {
+        input {
+          border-bottom-width: 0.1rem;
+          border-bottom-style: solid;
+          border-color: #c9c9c9;
+          box-shadow: none;
+          background-color: transparent;
+          border-radius: 0;
+          color: $text-color-black;
+        }
+
+      }
+
+      input:focus {
+        border-color: #707070;
+
+      }
+    }
+
+    fieldset {
+      width: 45%;
+      margin: auto;
+      @include mobile {
+        width: unset;
+        margin: unset;
+      }
+    }
+  }
+
+  &.modal__container--login-with-header {
+    .modal__container {
+        padding: 0 0 2rem;
+        border: none;
+    }
+
+    .modal__content {
+        padding: 2.5rem 2.7rem .5rem;
+
+        @include mobile {
+        padding: 1.7rem 2rem .5rem;
+        }
+    }
+  }
+
+  .modal__header--with-image {
+    background-color: $bg-color-blue-3;
+
+    &__logo-block {
+        width: 30%;
+        padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+        @include mobile {
+            width: 40%;
+        }
+
+        img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        }
+    }
+
+  }
+}
+
+.no-padding-right {
+  @include tablet {
+    padding-right: 1.5rem !important;
+  }
+
+  @include mobile {
+    padding-right: 1.5rem !important;
+  }
+}
+
+.text-help {
+    font-size: 1.2rem !important;
+}

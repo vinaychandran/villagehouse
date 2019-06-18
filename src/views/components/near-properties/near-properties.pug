@@ -1,0 +1,12 @@
+section.near-properties
+    .container-fluid
+        h2.near-properties__title Featured properties
+        span.near-properties__sub-title Properties Near You!
+        .row.pos-relative
+            #near-properties__slider.near-properties__content
+                - for (var i = 0; i < 6; i++)  {
+                    include ../property-card/property-card.pug
+                - }
+            .slick-controls
+                button.icon-arrow-left(type="button", data-controls="prev", tabindex="-1")
+                button.icon-arrow-right(type="button", data-controls="next", tabindex="-1")

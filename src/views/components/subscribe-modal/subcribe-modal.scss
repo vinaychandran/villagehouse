@@ -1,0 +1,121 @@
+.modal__container--subscribe{
+    @include mobile{
+        padding-bottom: unset !important;
+    }
+
+    flex-direction: column;
+
+    &.modal__overlay {
+        padding-top: 0;
+        justify-content: center;
+        align-items: center;
+
+        .modal__container {
+            @include mobile {
+                height: auto;
+                width: 95%;
+            }
+        }
+    }
+
+    .modal__container {
+        padding: 1.5rem 1.2rem 2rem;
+    }
+
+    .modal__header {
+        padding: 0 0 .7rem;
+        width: 60rem;
+        @include mobile {
+            width: 95%;
+        }
+    }
+
+    .modal__content {
+        padding-top: 1rem;
+        padding-bottom: .5rem;
+        h3 {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            @include mobile {
+                font-size: 2.2rem;
+                line-height: 2.5rem;
+            }
+        }
+
+        .form--wrapper {
+            [class^="col-"] {
+                padding-left: 1.5rem;
+
+                &:first-child {
+                    padding-left: 2rem;
+
+                    @include mobile {
+                        padding-left: 1.5rem;
+                    }
+                }
+            }
+            .field--wrapper {
+                &__name {
+                    padding-right: .5rem !important;
+                }
+                &__email {
+                    padding-left: .5rem;
+                }
+                .form-control{
+                    @include tablet{
+                        margin-bottom: 2rem;
+                    }
+                    @include mobile{
+                        margin-bottom: 1.5rem;
+                    }
+                }
+                @include mobile{
+                    margin-bottom: 1.5rem;
+                }
+            }
+            .subscribe__note{
+                p {
+                    color: color(c-white);
+                    @include mobile{
+                        line-height: 2rem;
+                    }
+                }
+                .subscribe__note__link{
+                    text-decoration: underline;
+                    color: color(c-white);
+                    font-weight: $fontweight-medium;
+                }
+            }
+        }
+    }
+
+    &.modal__container--subscribe-with-image {
+        .modal__container {
+            padding: 0 0 2rem;
+            border: none;
+        }
+        .modal__content {
+            padding: 2.5rem 2.7rem .5rem;
+            @include mobile {
+                padding: 1.7rem 2rem .5rem;
+            }
+        }
+    }
+
+    .modal__header-image--top {
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}
+.no-padding-right{
+    @include tablet{
+        padding-right: 1.5rem !important;
+    }
+    @include mobile{
+        padding-right: 1.5rem !important;
+    }
+}

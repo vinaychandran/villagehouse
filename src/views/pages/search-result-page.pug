@@ -1,0 +1,11 @@
+extends ../layouts/master.pug
+
+block title
+    title Search Result page
+
+block content
+    .search-result__page.content-page
+        .container-fluid
+            .row
+                include ../components/area-breadcrumb/area-breadcrumb.pug
+                include ../components/search-result-section/search-result-section.pug

@@ -1,0 +1,14 @@
+extends ../layouts/master.pug
+
+block title
+    title Shortlist Card
+
+block content
+    .shortlist-card-page.contentPage
+        .container-fluid
+            .row
+                .col-xs-12.col-sm-12
+                    .no-shortlist  Save your favorite properties here by selecting the 
+                        span.icon-heart-noshortlist
+                        |  on the property detail page. 
+                    include ../components/shortlist-card/shortlist-card.pug

@@ -1,0 +1,12 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - Company Page
+
+block basicSeo
+  meta(name='description' content='company page')
+  meta(name='keywords', content='company, page')
+  meta(name='author' content='')
+
+block content
+    include ../components/company-information/company-information.pug

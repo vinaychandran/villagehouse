@@ -1,0 +1,89 @@
+form.autocomplete-list-wrapper.showing-autocomplete .autocomplete-list {
+    top: calc(100% + .1rem);
+}
+
+.autocomplete-list {
+    position: absolute;
+    left: 0;
+    top: calc(100% + .3rem);
+    width: 100%;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    z-index: 10;
+    display: none;
+
+    > a {
+        display: block;
+        background-color: $bg-color-primary-white;
+        padding: 1.1rem;
+        padding-left: 4.5rem;
+        cursor: pointer;
+        border-bottom: .1rem solid $border-color-gray-23;
+        position: relative;
+
+        &:hover {
+            background-color: $bg-color-gray-21;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: $text-color-gray-blur;
+        }
+
+        &.is-on-focus {
+            background-color: $bg-color-primary;
+            color: $bg-color-primary-white;
+
+            &:before {
+                color: $bg-color-primary-white;
+                background-position: bottom center;
+            }
+
+            p {
+                color: $bg-color-primary-white;
+            }
+        }
+    }
+    
+    .is-property:before {
+        content: '';
+        background-image: url('../images/prop-logo.svg');
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        width: 2.1rem;
+        height: 2.6rem;
+        background-size: 98%;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+
+    .is-trainline:before {
+        content: '\e930';
+        font-family: $font-icomoon;
+        color: $bg-color-primary;
+        position: absolute;
+        left: 1rem;
+        top: 1.5rem;
+        font-size: 2.3rem;
+    }
+
+    .is-trainStation:before {
+        content: '\e931';
+        font-family: $font-icomoon;
+        color: $bg-color-primary;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        font-size: 2.5rem;
+    }
+
+    .is-location:before {
+        content: '\e932';
+        font-family: $font-icomoon;
+        color: $bg-color-primary;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        font-size: 2rem;
+    }
+}

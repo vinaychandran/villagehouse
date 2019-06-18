@@ -1,0 +1,60 @@
+.banner {
+    position: relative;
+    overflow: hidden;
+    // display: flex;
+    // justify-content: center;
+    height: 30rem;
+
+    @include min-xs {
+        height: 32rem;
+    }
+
+    @include min-sm {
+        height: 40rem;
+    }
+
+    .banner--mobile {
+        @include min-md {
+            display: none;
+        }
+    }
+
+    .banner--desktop {
+        display: none;
+
+        @include min-md {
+            display: block;
+        }
+    }
+
+    img {
+        position: relative;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        @include tablet {
+            height: 95%;
+            left: 37%;
+            transform: translateX(-37%);
+        }
+    }
+
+    &__caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 8rem;
+        word-break: keep-all;
+
+        &__text {
+            color: $text-color-secondary;
+            text-align: center;
+
+            h1 {
+                max-width: 74.2rem;
+                margin: 0 auto;
+                text-shadow: -.2rem .2rem .5rem rgba(0, 0, 0, 1);
+            }
+        }
+    }
+}

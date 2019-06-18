@@ -1,0 +1,86 @@
+header
+    .header
+        .container-fluid
+            .row.between-xs
+                .col-xs-7.col-md-3
+                    a.header__view-request(href="#")
+                        img(src= ("../../../assets/images/logo-header-white.svg"), alt="Village House")
+                .col-xs-2.col-md-9
+                    .navigation
+                        .navigation__layout
+                        button.btn-default.navigation__hamburger-btn
+                            span.icon-hamburger
+                        nav
+                            .navigation__close-button
+                                button.btn-default Close
+                                    span.icon-close
+                            //- ul.navigation__nav-bar
+                            //-     li
+                            //-         a(href="#") Home
+                            //-     li
+                            //-         a.shortlist(href="#") Shortlist
+                            //-     li
+                            //-         a(href="#") Promotions
+                            //-     li
+                            //-         a(href="#") FAQ
+                            //-     li
+                            //-         a(href="#") For Brokers
+                            //-     li
+                            //-         button.btn-default#dropdownLanguageBtn(for="languageToggleInput")
+                            //-             | English
+                            //-             span.icon-arrow
+                            //-         ul#dropdownLanguageList
+                            //-             li.lang__active
+                            //-                 a(href="#") English
+                            //-             li
+                            //-                 a(href="#") 日本語
+                            //-             li
+                            //-                 a(href="#") Português
+                            ul.navigation__nav-bar
+                                li
+                                    a(href="#") ホーム
+                                li
+                                    a.shortlist(href="#") お気に入り
+                                li
+                                    a(href="#") お得な情報
+                                li
+                                    a(href="#") よくある質問
+                                li
+                                    a(href="#") For 仲介業者様
+                                hr
+                                li
+                                    button.btn-default#dropdownLanguageBtn(for="languageToggleInput")
+                                        | 日本語
+                                        span.icon-arrow
+                                    ul#dropdownLanguageList
+                                        li.lang__active
+                                            a(href="#") English
+                                        li
+                                            a(href="#") 日本語
+                                        li
+                                            a(href="#") Português
+                            .navigation__requestview-btn
+                                a.btn-default(href="javascript:void(0)", data-micromodal-trigger="modalRequestForm")
+                                    span.icon-clock
+                                    | Request Viewing
+    .header__top-row
+        .container-fluid
+            .row.end-xs.middle-xs
+                .col-xs-12.col-sm-8
+                    a.header__top-row__enquire-now(href="javascript:void(0)", data-micromodal-trigger="modalRequestForm")
+                        span.icon-email
+                        | Enquire Now
+                    .header__top-row__contact-info
+                        span.icon-phone
+                        span.header__top-row__contact-info__detail__call Call
+                        a.header__top-row__contact-info__detail__number(href="tel:0120-830-105") 0120-830-105
+                    span.is-time From 09:00 to 21:00
+                    span.is-note Customer Service is only offered in Japanese, Portuguese, and English
+    input#sdfStartWorkingHour(type="hidden", value="09:00", name="sdfStartWorkingHour")
+    input#sdfStopWorkingHour(type="hidden", value="20:00", name="sdfStopWorkingHour")
+    input#emailRegexFormMsg(type="hidden", value="We require a valid email addressabc")
+    input#requiredFormMsg(type="hidden", value="Please fill in this fieldabc")
+    input#phoneRegexFormMsg(type="hidden", value="We require a valid phone number")
+    input#twoByteCharRegexFormMsg(type="hidden", value="We require a valid characters")
+                        
+include ../modal-request-form/modal-request-form.pug

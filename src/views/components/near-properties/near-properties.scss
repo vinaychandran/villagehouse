@@ -1,0 +1,173 @@
+.near-properties {
+    padding: 2.6rem 0 6.1rem;
+    background-color: $bg-color-gray-12;
+    @include min-sm {
+        padding: 6.4rem 0 5.5rem;
+    }
+    &__title {
+        font-size: 3rem;
+        line-height: 3.8rem;
+        margin: 0 0 1.4rem;
+        font-family: $font-heading;
+        font-weight: $fontweight-bold;
+        color: $text-color-primary;
+        text-align: center;
+
+        @include min-sm {
+            font-size: 3.5rem;
+            line-height: 4.4rem;
+            margin: 0 0 1.1rem;
+        }
+    }
+
+    &__sub-title {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: $text-color-gray-11;
+        margin: 0 auto;
+        margin-bottom: 1.6rem;
+        display: block;
+        text-align: center;
+        @include min-sm {
+            margin-bottom: 3.5rem;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 84rem;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        margin: 0 auto 3rem auto;
+        padding: 0 1rem;
+
+        @include min-sm {
+            padding: 0;
+        }
+
+        &>.slick-list {
+            z-index: 1;
+        }
+
+        .slick-slide {
+            width: 39.5rem;
+
+            @include min-sm {
+                width: 42.5rem !important;
+            }
+
+            & > div {
+                height: 100%;
+            }
+        }
+    }
+
+    ul.slick-dots {
+        display: inline;
+        width: auto;
+        bottom: -5rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include min-sm {
+            bottom: -4.6rem;
+        }
+    }
+
+    .slick-controls {
+        display: flex !important;
+        margin-bottom: 0;
+        top: initial;
+        transform: translateY(0);
+        bottom: -2.9rem;
+        justify-content: center;
+
+        @include min-sm {
+            bottom: -2.5rem;
+        }
+
+        &.hidden {
+            display: none !important;
+        }
+
+        button {
+            margin: 0 7rem;
+            width: 4rem;
+            height: 4rem;
+            background: $bg-color-primary-white;
+            
+            &:hover {
+                background: $btn-bg-color-primary;
+            }
+
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $text-color-primary;
+            }
+        }
+
+        button.icon-arrow-left {
+            left: 0;
+        }
+
+        button.icon-arrow-right {
+            right: 0;
+        }
+    }
+
+    .slick-list:before,
+    .slick-list:after {
+        content: none;
+        position: absolute;
+        width: 5rem;
+        top: 0;
+        bottom: 0;
+        z-index: 9;
+
+        @include min-sm {
+            content: '';
+        }
+        
+        @include min-md {
+            content: none;
+        }
+    }
+    .slick-list:before {
+        left: 0;
+        background: linear-gradient(to right, rgba(253,243,223,1) 1%,rgba(253,243,223,1) 14%,rgba(253,243,223,0.09) 92%,rgba(0,0,0,0) 100%);
+    }
+    .slick-list:after {
+        right: 0;
+        background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(253,243,223,0.09) 8%,rgba(253,243,223,1) 86%,rgba(253,243,223,1) 99%);
+    }
+}
+
+.is-campagin.near-properties {
+    @include min-sm {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+    }
+    .near-properties__title {
+        font-size: 1.7rem;
+        line-height: 1.22;
+        margin-bottom: 2.4rem;
+        @include min-sm {
+            font-size: 3rem;
+            line-height: 4.4rem;
+        }
+    }
+
+    .campaign-btn--enquiry {
+        text-align: center;
+        margin-top: 4rem;
+        @include min-sm {
+            margin-top: 6rem;
+        }
+    }
+}

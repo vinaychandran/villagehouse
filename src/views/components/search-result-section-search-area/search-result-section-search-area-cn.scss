@@ -1,0 +1,236 @@
+.search-result-section-search-area {
+	flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        order: 1;
+
+        @include min-md {
+            flex-direction: row;
+            justify-content: space-between;
+            order: 2;
+        }
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        line-height: 4rem;
+        margin: 0 0 1.1rem;
+
+        @include min-md {
+            margin: 0;
+        }
+    }
+
+    &__filter {
+        display: flex;
+
+        @include min-sm {
+            border-radius: 2.4rem;
+            // overflow: hidden;
+            border: 2px solid color(c-white-blur-5);
+            box-shadow: 0 0.3rem 0.4rem 0 rgba(118, 141, 154, 0.23);
+        }
+
+        @include min-md {
+            border: 0;
+            border-radius: 0;
+            // overflow: auto;
+            box-shadow: none;
+        }
+
+        &__btn-group {
+            display: flex;
+            flex: 1;
+            border-top: 0.2rem solid color(c-white-blur-5);
+            box-shadow: 0 0.3rem 0.4rem 0 rgba(118, 141, 154, 0.23);
+            margin: 0 -1.5rem;
+
+            @include min-sm {
+                margin: 0;
+                border: 0;
+            }
+
+            @include min-md {
+                border-top: 0.2rem solid color(c-white-blur-5);
+                flex: 0 1 auto;
+                width: auto;
+                border-top: none;
+                box-shadow: none;
+            }
+
+            button {
+                width: 100%;
+                height: 100%;
+                background: color(c-white);
+                color: color(c-gray-11);
+                font-size: 1.7rem;
+                font-weight: 500;
+                text-align: center;
+                border: 0;
+                padding: 1.4rem 2rem 1.3rem 2rem;
+                border-right: 0.2rem solid color(c-white-blur-5);
+                border-radius: 0;
+                cursor: pointer;
+
+                span {
+                    padding-right: 0.4rem;
+                    font-size: 1.8rem;
+
+                    &:before {
+                        position: relative;
+                        top: 0.1rem;
+                    }
+
+                    @include min-md {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:active:focus {
+                    background: color(c-white-blur-6);
+                    color: color(c-black-2);
+                    border: none;
+                    box-shadow: none;
+                }
+
+                @include min-md {
+                    @include typography(fonts(main),
+                    fontWeight(medium),
+                    1.4rem,
+                    1.9rem);
+                    border: solid 0.1rem color(c-dark-blue);
+                    border-color: #b2c5ce;
+                    padding: 1rem 2rem 1rem 2rem;
+                    color: color(c-black-2);
+                    border-radius: $page-border-radius;
+
+                    &:active:focus {
+                        background-color: color(c-white);
+                        border: solid 0.1rem color(c-dark-blue);
+                    }
+                }
+            }
+
+            &__btn-search-mobile {
+                flex: 1;
+
+                @include min-md {
+                    display: none;
+                    flex: 0 1 auto;
+                }
+
+                button {
+                    border-right: 0;
+                }
+            }
+
+            &__btn-area {
+                flex: 1;
+
+                @include min-md {
+                    margin-right: 1rem;
+                    flex: 0 1 auto;
+                }
+
+                button {
+                    span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            &__btn-station {
+                flex: 1;
+
+                @include min-md {
+                    margin-right: 1rem;
+                    flex: 0 1 auto;
+                }
+
+                button {
+                    span {
+                        @include min-md {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__input-group {
+			display: none;
+			position: relative;
+
+            @include min-md {
+                display: block;
+            }
+
+            &__form {
+				position: relative;
+                display: flex;
+                height: 100%;
+                border-radius: $page-border-radius;
+                width: 24.2rem;
+                max-width: 47.1rem;
+                border: .1rem solid color(c-gray-7);
+
+                &__input-submit {
+                    width: 4.5rem;
+                    border-radius: $page-border-radius;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    color: $btn-text-color-primary;
+                    background-color: $btn-bg-color-primary;
+                    border: none;
+                    text-decoration: none;
+                    padding: 0;
+                    cursor: pointer;
+                }
+
+                &__input-box {
+                    width: calc(100% - 4.5rem);
+
+                    input {
+                        color: rgba(0, 59, 89, 0.5);
+                        height: 100%;
+                        border: .1rem solid transparent;
+                        background-color: color(white);
+                        padding: 1rem 1rem 1.2rem;
+                        font-size: 1.7rem;
+                        box-shadow: none;
+                        height: 4rem;
+                        width: 100%;
+
+                        @include placeholder() {
+                            color: color(c-gray-13);
+                            @include typography(fonts(main), fontWeight(bold), 1.1rem, 2rem);
+                            letter-spacing: 0.02em;
+                        }
+
+                        &::-ms-input-placeholder {
+                            font-size: 0.8rem;
+                            transform: scale(0.6875) translate(-5rem, .1rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@supports (-ms-ime-align:auto) {
+    .search-result-section-search-area__filter__input-group__form__input-box input:focus {
+        @include placeholder() {
+            color: transparent;
+        }
+    }
+}

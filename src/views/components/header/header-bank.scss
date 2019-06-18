@@ -1,0 +1,40 @@
+.header-bank {
+    background: $bg-color-primary;
+    height: 6rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    line-height: 2.1rem;
+    display: flex;
+    align-items: center;
+
+    @include min-md {
+        height: 9rem;
+    }
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    &__view-request {
+
+        @include min-md {
+            background-color: initial;
+            color: $text-color-secondary;
+            padding: 1rem 2.1rem 1rem 0;
+        }
+
+        img {
+            height: 4.4rem;
+            @include min-md {
+                height: 5.7rem;
+            }
+        }
+    }
+}
+

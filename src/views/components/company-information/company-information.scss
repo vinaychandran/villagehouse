@@ -1,0 +1,244 @@
+.company-information {
+    overflow: hidden;
+    [class^="col-"] {
+        margin-bottom: 1rem;
+        &:nth-child(odd) {
+            padding-right: .5rem;
+        }
+        &:nth-child(even) {
+            padding-left: .5rem;
+        }
+        @include mobile {
+            &:nth-child(odd) {
+                padding-right: 1.5rem;
+            }
+            &:nth-child(even) {
+                padding-left: 1.5rem;
+            }
+        }
+    }
+    &__detail {
+        margin-bottom: 60px;
+        padding-top: 30px;
+
+        h2 {
+           margin-bottom: 40px;
+           margin-top: 0; 
+        }
+
+        &__table {
+            tr {
+                padding: 10px;
+                
+                td {
+                    padding: 10px;
+                    padding-left: 0;
+                    border-bottom: solid 1px #e5ebee;
+                    font-weight: 400;
+                    @include mobile {
+                        width: 50%;
+                    }
+                    &:first-child {
+                        font-weight: 700;
+                        padding-right: 100px;
+                        white-space: nowrap;
+                        @include mobile {
+                            padding-right: 1rem;
+                            white-space: unset;
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-size: 12px;
+                margin-top: 20px;
+                color: #768E9B;
+            }
+        }
+    }
+    
+    span.text {
+        margin-top: -0.4rem !important;
+    }
+
+    &__header {
+        display: flex;
+        padding: 1rem 0rem;
+        border-bottom: solid .13rem #b5b5b5;
+        span {
+            margin-right: 1.5rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+    }
+
+    &__content {
+        padding: 2rem 0rem;
+        span {
+            margin-right: 1.5rem;
+        }
+        &__address {
+            display: inline-flex;
+            padding-left: 1rem;
+        }
+        &__direction {
+            display: inline-flex;
+            padding-left: 0.8rem;
+            margin-top: 1rem;
+            font-size: 1.6rem;
+        }
+        &__gm-block {
+            @include mobile {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__headquarter {
+        padding-bottom: 6rem;
+    }
+
+    &__branch {
+        padding-bottom: 6rem;
+    }
+
+    &__branch-block {
+        border: solid 1px #dcdcdc;
+        padding: 2.5rem;
+        height: 100%;
+        &__title {
+            padding-bottom: 1rem;
+            border-bottom: solid 1px #dcdcdc;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        &__content {
+            margin-top: 1rem;
+            display: inline-flex;
+        }
+    }
+
+    &__google-map__block {
+        margin-top: 1rem;
+    }
+
+    &__map {
+        padding: 0rem 0rem 6rem;
+
+        &__container {
+            width: 100%;
+            height: 45rem;
+        }
+        .gm-style-pbc {
+            &+div {
+                &>div {
+                    &>div {
+                        &>div {
+                            &>div {
+                                &:not(.gm-style-iw) {
+                                    z-index: 1;
+                                    &>div {
+                                        &:nth-child(2) {
+                                            display: none;
+                                        }
+    
+                                        &:nth-child(4) {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .gm-style-iw {
+            padding: 20px !important;
+            display: block !important;
+            overflow: visible;
+            background: white !important;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 .1rem .4rem -.1rem;
+            border-radius: .3rem;
+            &>div {
+                overflow: visible !important;
+                background-color: inherit;
+                width: 100%;
+                max-width: 100% !important;
+                &>div {
+                    overflow: visible !important;
+                }
+            }
+    
+            &+.gm-ui-hover-effect{
+                top: 1.5rem !important;
+                right: 1.3rem !important;
+            }
+        }
+    
+        .infowindow-wrapper {
+            padding: 0;
+            margin: 0;
+            // height: 26.5rem;
+            // width: 17.3rem;
+            position: relative;
+        }
+    
+        .geo-pin-bubble {
+            display: flex;
+            flex-direction: column;    
+            width: 17.3rem;
+
+            .marker__header {
+                padding: 0rem 0rem 1rem;
+                border-bottom: solid .13rem #b5b5b5;
+                span {
+                    margin-right: 1rem;
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                }
+            }
+
+            .marker__content {
+                padding: 1rem 0rem 0rem;
+            }
+    
+            address {
+                margin-bottom: 0;
+                color: color(c-dark-blue-navy-6);
+                @include typography(fonts(main), 400, 1.4rem, 1.42857143);
+                width: 100%;
+                text-align: left;
+                white-space: normal;
+                left: 0;
+                right: 0;
+                font-style: normal;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    
+        .marker-btn {
+            margin-top: 2rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    } 
+}
+
+.col-cus-padding {
+}
+
+#companyMap{
+    padding: 40% 0;
+    // padding-bottom: 40%;
+    // -webkit-filter: grayscale(100%);
+    // -moz-filter: grayscale(100%);
+    // -ms-filter: grayscale(100%);
+    // -o-filter: grayscale(100%);
+    // filter: grayscale(100%);
+    position: relative;
+}

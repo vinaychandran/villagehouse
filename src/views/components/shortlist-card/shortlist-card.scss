@@ -1,0 +1,107 @@
+.shortlist-card {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .lazy--wrapper {
+        position: relative;
+    }
+
+    &__item {
+        background: $bg-color-primary-white;
+        padding: $gutter;
+        border: $border-line-solid;
+        border-radius: $page-border-radius;
+        width: 100%;
+        margin-bottom: 3rem;
+
+        @include min-sm {
+            margin-bottom: 4.6rem;
+            width: 28.7rem;
+        }
+
+        .img--wrapper {
+            position: relative;
+        }
+
+        .for-shortlist-icon {
+            top: 2rem;
+            left: auto;
+            right: 2rem;
+        }
+
+        &__details {
+            padding: 2.2rem 0 1rem;
+            text-align: center;
+
+            .price {
+                @include typography(fonts(main), fontWeight(bold), 2.5rem, 3.3rem);
+                color: color(c-blue);
+                display: block;
+            }
+
+            .place {
+                @include typography(fonts(main), fontWeight(regular), 1.6rem, 1.9rem);
+                letter-spacing: 0.03rem;
+                color: color(c-dark-blue);
+                opacity: 0.5;
+                padding-top: .5rem;
+            }
+
+            .area {
+                @include typography(fonts(main), fontWeight(regular), 1.8rem, 2.4rem);
+                opacity: 0.65;
+                padding: 1.1rem 0 1.9rem;
+            }
+        }
+    }
+
+    &+.slick-controls {
+        button {
+            background: rgba(0, 59, 89, 0.1);
+
+            &:hover {
+                background: $btn-bg-color-primary;
+            }
+
+            &:before {
+                color: $text-color-primary;
+            }
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    .slick-slide {
+        & > div {
+            height: 100%;
+            display: flex;
+            .shortlist-card__item {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+#shortlistcard {
+    display: none;
+    &.shortlist-card-show {
+        display: flex;
+    }
+}
+
+.no-shortlist span {
+    color: $bg-color-primary-pink;
+    font-weight: 700;
+}

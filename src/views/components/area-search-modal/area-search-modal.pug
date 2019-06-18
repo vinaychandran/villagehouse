@@ -1,0 +1,26 @@
+.modal.micromodal-slide.modal--search#areaSearchModal(aria-hidden="true")
+    .modal__overlay.modal--search__overlay(tabindex="-1")
+        .modal__container.modal--search__container.is-still-loading.is-level1(role="dialog", aria-modal="true", data-sc_lang="jp")
+            a.modal--search__closeBtn(href="javascript:void(0)")
+                span.icon-modal-closeBtn(aria-label="Close this dialog window")
+            .modal--search__header
+                .modal--search__header__title
+                    span Area:
+                    ul
+                        li
+                            span All Japan
+            .modal--search__container__loading-area
+                .data-loading-gif
+            .modal--search__content
+                a.modal--search__submit-btn Search
+                .modal--search__content__title
+                    span Tokai
+                .modal--search__content__district-title District title
+                ul.modal--search__content__list
+            .modal--search__map
+                include ../search-result-map-svg/search-result-map-svg.pug
+            .modal--search__footer
+                a.modal--search__submit-btn Search
+input#sdfTrainlineAreaDataBaseUrl(type="hidden", value="https://dev.villagehouse.jp/ajax/villageHouse/Data/")
+input#allAreaText(type="hidden", value="All Area Text Test")
+input#allDistrictorLineText(type="hidden", value="All Text Test")

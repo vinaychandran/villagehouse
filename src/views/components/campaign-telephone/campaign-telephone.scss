@@ -1,0 +1,50 @@
+.campaign-telephone {
+    padding: 5.6rem 1.5rem 7.5rem;
+    text-align: center;
+
+    @include min-sm {
+        padding: 11.2rem 2rem 8.8rem;
+    }
+
+    &__block-info {
+        display: block;
+        padding: 2.4rem 0 3.5rem;
+        border-radius: 1.4rem;
+        background-color: color(c-white-blur-4);
+        color: color(c-blue-7);
+        font-size: 3rem;
+        text-align: center;
+
+        @include min-sm {
+            display: inline-block;
+            border-radius: 0;
+            padding: 2.6rem 18.5rem 2rem;
+        }
+
+        &__number {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 1rem 0 1rem 4rem;
+            background: url('../images//ico_tel_sp.png') no-repeat left center;
+            background-size: 3.1rem 3.1rem;
+
+            @include min-sm {
+                background: url('../images//ico_tel_pc.png') no-repeat left center;
+            }
+
+            a {
+                color: color(c-blue-7);
+                font-size: inherit;
+
+                &:hover {
+                    color: color(c-blue-7);
+                }
+            }
+        }
+
+        &__time {
+            font-size: 1.5rem;
+            color: color(c-black-3);
+        }
+    }
+}

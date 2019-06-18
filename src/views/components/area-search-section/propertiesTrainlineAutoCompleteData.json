@@ -1,0 +1,130 @@
+
+[
+    {
+        "name": "Shunkou",
+        "type": "property",
+        "url": "/Shunkou",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Shunkou1",
+        "type": "property",
+        "url": "/Shunkou",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Shunkou2",
+        "type": "property",
+        "url": "/Shunkou",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Shunkou3",
+        "type": "property",
+        "url": "/Shunkou",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Shunkou4",
+        "type": "property",
+        "url": "/Shunkou",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Shunkou5",
+        "type": "property",
+        "url": "/Shunkou",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Mizumoto",
+        "type": "property",
+        "url": "/Mizumoto",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Otanoshike",
+        "type": "property",
+        "url": "/Otanoshike",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Hassamu",
+        "type": "property",
+        "url": "/Hassamu",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Takahira",
+        "type": "property",
+        "url": "/Takahira",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Hakodate",
+        "type": "property",
+        "url": "/Hakodate",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Obihiro",
+        "type": "property",
+        "url": "/Obihiro",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Fukuzumi",
+        "type": "property",
+        "url": "/Fukuzumi",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Yamate",
+        "type": "property",
+        "url": "/Yamate",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Daikoku",
+        "type": "property",
+        "url": "/Daikoku",
+        "location": "Sapporo-shi, Hokkaido"
+    },
+    {
+        "name": "Shunkoua",
+        "type": "trainline",
+        "url": "/Shunkoua",
+        "location": "(Toyama-ken) 930-0029"
+    },
+    {
+        "name": "Shunkoub",
+        "type": "trainline",
+        "url": "/Shunkoub",
+        "location": "(Toyama-ken) 930-0029"
+    },
+    {
+        "name": "Shunkouc",
+        "type": "trainline",
+        "url": "/Shunkouc",
+        "location": "(Toyama-ken) 930-0029"
+    },
+    {
+        "name": "Shunkoud",
+        "type": "trainline",
+        "url": "/Shunkoud",
+        "location": "(Toyama-ken) 930-0029"
+    },
+    {
+        "name": "Shunkoue",
+        "type": "trainline",
+        "url": "/Shunkoue",
+        "location": "(Toyama-ken) 930-0029"
+    },
+    {
+        "name": "Shunkouf",
+        "type": "trainline",
+        "url": "/Shunkouf",
+        "location": "(Toyama-ken) 930-0029"
+    }
+]
+    

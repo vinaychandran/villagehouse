@@ -1,0 +1,112 @@
+.moving-support {
+    margin-top: 3rem;
+
+    &__info {
+        background-color: $bg-color-gray-26;
+        border-radius: 1.5rem;
+        padding: 6rem 3.5rem 2rem;
+        width: calc(100% + 2*#{$gutter-xs});
+        margin-left: -#{$gutter-xs};
+        margin-right: -#{$gutter-xs};
+
+        @include min-sm {
+            padding: 5rem 4rem 2rem;
+            width: calc(100% + 2*#{$gutter-md});
+            margin-left: -#{$gutter-md};
+            margin-right: -#{$gutter-md};
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @include min-sm {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 3rem;
+            color: $text-color-blue;
+            @include typography($font-heading, $fontweight-bold, 3.2rem, 4.4rem);
+        }
+
+        h4 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: $text-color-black-5;
+            @include typography($font-main, $fontweight-medium, 2.4rem, 2.64rem);
+        }
+
+        span {
+            margin-right: 1rem;
+            color: $bg-color-yellow-9;
+        }
+    }
+
+    &__cost-detail {
+        text-align: center;
+        &__item {
+            min-height: 20rem;
+            margin-bottom: 2rem;
+
+            @include min-sm {
+                min-height: 23rem;
+            }
+        }
+
+        h3 {
+            margin: 0 0 2rem 0;
+            color: $text-color-blue;
+            @include typography($font-heading, $fontweight-bold, 6rem, 3.8rem);
+
+            @include min-sm {
+                margin-top: 4rem;
+            }
+        }
+    }
+
+    &__example {
+        h4 {
+            margin: 1rem 0;
+            color: $text-color-black-5;
+            text-align: center;
+            @include typography($font-main, $fontweight-medium, 2.4rem, 2.64rem);
+        }
+
+        &__content {
+            margin: 3rem auto;
+            width: 100%;
+            max-width: 47.5rem;
+        }
+
+        &__content__item {
+            display: flex;
+            justify-content: space-between;
+
+            &.is-total {
+                border-top: solid 3px $border-color-yellow-9;
+                margin-top: 2rem;
+                padding-top: 2rem;
+            }
+
+            span {
+                display: block;
+                color: $text-color-black-5;
+                width: 19%;
+            }
+
+            span:first-child {
+                padding-right: 2rem;
+                width: 80%;
+                display: flex;
+                align-items: center;
+            }
+
+            span:last-child {
+                text-align: left;
+            }
+        }
+    }
+}

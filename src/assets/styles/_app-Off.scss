@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+/*
+  EN font
+*/
+@import './base/font-language/en-EN';
+@import './base/_functions';
+@import './base/_variables';
+@import './base/_mixins';
+@import './base/_fonts';
+@import './base/_global';
+@import './base/_flexboxgrid';
+@import './base/_micromodal';
+@import './base/_lazyload';
+
+
+// Component
+@import '../../views/components/header/header';
+@import '../../views/components/footer/footer';
+@import '../../views/components/modal-request-form/modal-request-form.scss';
+@import '../../views/components/banner/banner.scss';
+@import '../../views/components/experience/experience.scss';
+@import '../../views/components/sibling-bar-header/sibling-bar-header.scss';
+

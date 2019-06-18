@@ -1,0 +1,60 @@
+.bank {
+    padding: 6rem 0rem;
+    text-align: center;
+    p {
+        color: #707070 !important;
+    }
+
+    &__applicant-info {
+        margin-top: 2rem;
+        p{
+            font-weight: 700;
+        }
+    }
+    &__guide {
+        margin-top: 2rem;
+        &__app-number {
+            font-weight: 700;
+        }
+    }
+    &__action {
+        margin-top: 2rem;
+        a {
+            color: #5d82d8;
+            text-decoration: underline;
+        }
+        &__close-screen {
+            display: block;
+            font-weight: 700;
+        }
+        &__exit-deposit {
+            display: block;
+        }
+    }
+    
+    .bank-failed {
+        &__title-block {
+            &__failed {
+                font-size: 3rem;
+            }
+            &__message {
+                font-size: 2rem;
+            }
+            color: #ee7a2b;
+            
+        }
+    }
+
+    .bank-success {
+        &__title-block {
+            color: #0089ce;
+            &__success {
+                font-size: 3rem;
+            }
+            &__message {
+                font-size: 2rem;
+            }
+        }
+    }
+        
+}

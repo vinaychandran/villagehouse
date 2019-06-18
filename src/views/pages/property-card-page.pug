@@ -1,0 +1,10 @@
+extends ../layouts/master.pug
+
+block title
+    title Property Card
+
+block content
+    .property-card__page
+        .container-fluid
+            .row
+                include ../components/property-card-list/property-card-list.pug

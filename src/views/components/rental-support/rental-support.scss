@@ -1,0 +1,39 @@
+.rental-support {
+    text-align: center;
+    margin-bottom: 6rem;
+
+    &__wrapper {
+        width: 100%;
+        background: $bg-color-gray-26;
+        border-radius: 1.5rem;
+        padding: 2rem;
+    }
+
+    h2 {
+        color: $text-color-blue;
+        margin-bottom: 2rem;
+        margin-top: 0;
+        @include typography($font-heading, $fontweight-bold, 3rem, 4.4rem);
+
+        @include min-sm {
+            font-size: 4.2rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    a {
+        cursor: pointer;
+        display: inline-block;
+        color: $text-color-blue;
+        margin-bottom: 1rem;
+        @include typography($font-main, $fontweight-medium, 3rem, 3.3rem);
+
+        &:hover {
+            color: $text-color-blue;
+        }
+
+        span {
+            margin-right: 1rem;
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.building-block {
+    background-color: $bg-color-gray-25;
+    padding-bottom: 3rem;
+    margin-bottom: 6rem;
+
+    @include min-md {
+        padding-top: 6.5rem;
+    }
+    &__title {
+        font-family: $font-main;
+        color: $text-color-blue-13;
+        font-size: 2.8rem;
+        font-weight: $fontweight-bold;
+        margin-bottom: 2.5rem;
+        line-height: 3rem;
+        @include min-md {
+            margin-top: 0;
+        }
+    }
+
+    &__room-block {
+        background: $bg-color-primary-white;
+        padding: 3.5rem;
+        margin-bottom: 3rem;
+        color: $text-color-primary;
+
+        p.unit-detail__info__availability {
+            justify-content: flex-end;
+            align-items: flex-start;
+            margin-top: .5rem;
+            margin-bottom: 0;
+            display: none;
+            @include min-md {
+                display: flex;
+            }
+        }
+
+        h4 {
+            margin-top: 0;
+            margin-bottom: 3.5rem;
+            @include typography($font-heading, $fontweight-medium, 2.8rem, 2.8rem);
+        }
+
+        &__content__description {
+            margin-bottom: 2rem;
+            @include typography($font-main, $fontweight-regular, 1.6rem, 2.3rem);
+        }
+
+        &__content__request-btn {
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            line-height: 2.7rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            i {
+                margin-right: 1rem;
+            }
+        }
+
+        &__content__slider {
+            margin-bottom: 2rem;
+
+            &__image-slider {
+                display: block !important;
+            }
+
+            @include min-sm {
+                margin-bottom: 0;
+            }
+
+            img {
+                height: 17.8rem;
+                margin: 0 auto;
+            }
+
+            &.slick-slider .slick-arrow.slick-prev,
+            &.slick-slider .slick-arrow.slick-next {
+                position: absolute;
+                height: 3.3rem;
+                width: 3.3rem;
+                background: rgba(255,255,255,0.6);
+                z-index: 1;
+                border-radius: 50%;
+                &:hover {
+                    background: rgba(255,255,255,1);
+                }
+            }
+
+            &.slick-slider .slick-arrow.slick-prev:before,
+            &.slick-slider .slick-arrow.slick-next:before {
+                font-family: $font-icomoon;
+                color: $text-color-primary;
+                font-size: 3rem;
+                font-weight: $fontweight-bold;
+                opacity: 1;
+            }
+
+            &.slick-slider .slick-arrow.slick-prev:before {
+                content: "\e90a";
+            }
+
+            &.slick-slider .slick-slide {
+                padding: 0;
+            }
+
+            &.slick-slider .slick-arrow.slick-next:before {
+                content: "\e90d";
+            }
+
+            &.slick-slider .slick-arrow.slick-prev {
+                left: .8rem;
+                right: initial;
+            }
+
+            &.slick-slider .slick-arrow.slick-next {
+                left: initial;
+                right: .8rem;
+            }
+        }
+    }
+}

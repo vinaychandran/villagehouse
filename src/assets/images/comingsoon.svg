@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.061 18.826">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #0089ce;
+      }
+
+      .cls-1 {
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Symbol_113_1" data-name="Symbol 113 – 1" transform="translate(-468.863 -782.593)">
+    <g id="Symbol_111_1" data-name="Symbol 111 – 1" transform="translate(469.165 780.3)">
+      <path id="Path_141" data-name="Path 141" class="cls-1" d="M17.03,7.4v9.717H3.424V7.453M.4,10.426,10.277.7l9.777,9.726" transform="translate(0 3)"/>
+    </g>
+    <g id="Symbol_112_1" data-name="Symbol 112 – 1" transform="translate(469.165 780.3)">
+      <g id="Symbol_110_1" data-name="Symbol 110 – 1" transform="translate(10.237 9.284)">
+        <path id="Path_143" data-name="Path 143" class="cls-2" d="M15.505,12.275v5.047" transform="translate(-15.505 -12.275)"/>
+      </g>
+      <path id="Path_144" data-name="Path 144" class="cls-2" d="M15.505,22.664v1.853" transform="translate(-5.269 -6.615)"/>
+    </g>
+  </g>
+</svg>

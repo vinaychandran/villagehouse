@@ -1,0 +1,11 @@
+.area-search-result-map {
+    display: none;
+    justify-content: center;
+    border-radius: 1rem;
+    background: color(c-white-blur);
+    padding: 2rem;
+
+    @include min-md {
+        display: flex;
+    }
+}

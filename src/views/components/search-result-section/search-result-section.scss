@@ -1,0 +1,10 @@
+.search-result-section {
+    min-height: 30rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include min-md {
+        margin-top: 1.5rem;
+    }
+}

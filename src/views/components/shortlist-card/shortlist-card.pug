@@ -1,0 +1,32 @@
+.row.pos-relative#shortlistcard.shortlist-card-show
+    .shortlist-card
+        - for (var i = 0; i < 5; i++)  {
+            .shortlist-card__item
+                .img.lazy--wrapper
+                    a(href="javascript:void(0)").for-shortlist-icon
+                    if i % 3 == 1
+                        a(href="/en/chintai/PLA-FTVH-1-7005-3DK-1/", tabindex="0")
+                            img.lazy(src="https://villagehouse-photos.s3.amazonaws.com/5152/H7/300x300_5152_H7_I_G_1231.jpg", alt="")
+                    if i % 3 == 2
+                        a(href="/en/chintai/PLA-FTVH-1-7005-3DK-1/", tabindex="0")
+                            img.lazy(src="", alt="")
+                    if i % 3 == 0
+                        a(href="/en/chintai/PLA-FTVH-1-7005-3DK-1/", tabindex="0")
+                            img.lazy(src="https://villagehouse-photos.s3.amazonaws.com/5152/H7/300x300_5152_H7_I_G_1.jpg", alt="")
+                .shortlist-card__item__details
+                    span.price ¥15,000 
+                    .place Tosu-shi 
+                    .area 
+                        | 3DK / 57.96m
+                        sup 2
+                    a.btn.btn-info.anchor-btn(href="/en/chintai/PLA-FTVH-1-7005-3DK-1/") Learn More
+        - }
+    .slick-controls
+        button.icon-arrow-left(type="button", data-controls="prev", tabindex="-1")
+        button.icon-arrow-right(type="button", data-controls="next", tabindex="-1")
+.row.pos-relative#shortlistcard
+    .col-xs-12.col-sm-12
+        span.text-nodata
+            | Save your favorite properties here by selecting the&nbsp;
+            span.icon-shortlist-heart
+            | &nbsp;on the property detail page.

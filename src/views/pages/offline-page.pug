@@ -1,0 +1,17 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - Offline Page
+
+block basicSeo
+  meta(name='description' content='offline page')
+  meta(name='keywords', content='offline, page')
+  meta(name='author' content='')
+
+block content
+
+  //- Desktop page
+  section.page.home__page
+    include ../components/banner/banner.pug
+    include ../components/limited-offer/limited-offer.pug
+    include ../components/experience/experience-offline.pug

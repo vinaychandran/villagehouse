@@ -1,0 +1,21 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - home
+
+block basicSeo
+  meta(name='description' content='home page')
+  meta(name='keywords', content='home, page')
+  meta(name='author' content='')
+
+block content
+
+  //- Desktop page
+  .property-detail
+    .container-fluid
+        include ../components/advertise-banner/advertise-banner.pug 
+        include ../components/property-detail-page__slider-and-text/property-detail-page__slider-and-text.pug 
+        include ../components/property-detail-page__style/property-detail-page__style.pug 
+        include ../components/property-detail-page__properties-info/property-detail-page__properties-info.pug 
+        include ../components/property-detail-page__properties-map/property-detail-page__properties-map.pug 
+  include ../components/near-properties/near-properties.pug

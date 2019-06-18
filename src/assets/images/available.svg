@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.061 18.826">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #00ceae;
+      }
+
+      .cls-1 {
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Symbol_109_1" data-name="Symbol 109 – 1" transform="translate(0.302 -2.293)">
+    <g id="Symbol_108_1" data-name="Symbol 108 – 1">
+      <path id="Path_141" data-name="Path 141" class="cls-1" d="M17.03,7.4v9.717H3.424V7.453M.4,10.426,10.277.7l9.777,9.726" transform="translate(0 3)"/>
+    </g>
+    <path id="Path_142" data-name="Path 142" class="cls-2" d="M18.692,21.1l-5.44,5.353L10.4,23.6" transform="translate(-4.309 -9.724)"/>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+.property-card__list {
+    transition: all 0.5s ease; 
+    overflow-y: hidden;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    @include min-md {
+        width: 45%;
+    }
+
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+
+        @include min-md {
+            overflow-y: auto;
+        }
+
+        .property-card {
+            width: 100%;
+            margin-bottom: 1.5rem;
+
+            @include min-md {
+                width: 40rem;
+            }
+        }
+    }
+}

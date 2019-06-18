@@ -1,0 +1,224 @@
+$gutter-xs: 1.5rem;
+
+.sibling-header {
+    margin-bottom: 2rem;
+
+    h2 {
+        margin: 0;
+
+        &.visible-xs a {
+            line-height: 3.8rem;
+        }
+
+        &:hover a {
+            color: $btn-text-color-blue-navy-2;
+        }
+    }
+
+    h2 a {
+        color: $text-color-primary;
+        font-family: $font-heading;
+        font-weight: $fontweight-bold;
+        line-height: 4.4rem;
+        font-size: 2.8rem;
+    }
+
+    &__sticky-header {
+        width: 100%;
+        z-index: 97;
+        background: #fff;
+
+        
+        
+        &.is-sticky {
+            position: fixed;
+            left: 0;
+            top: 6rem;
+            z-index: 98;
+            border-bottom: .2rem solid $border-color-gray;
+
+            @include min-sm {
+                top: 9rem;
+            }
+            .sibling-header__sticky-header__content {
+                width: calc(100% + 2*#{$gutter-xs});
+                // margin-right: calc(-1*#{$gutter-xs});
+                // margin-left: calc(-1*#{$gutter-xs});
+                margin: 0 calc(-1*#{$gutter-xs});
+                border-bottom: none;
+    
+                @include min-sm {
+                    width: 71rem; 
+                    margin: 0 auto;
+                }
+
+                @include min-md {
+                    width: 94rem;
+                }
+            }
+        }
+
+        @include min-sm {
+            width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+            display: inline-flex;
+        }
+
+        &__units-list {
+            width: 100%;
+            // display: flex;
+
+            @include min-sm {
+                width: auto;
+            }
+        }
+
+        &__content {
+            border-bottom: .2rem solid $border-color-gray;
+            position: sticky;
+            top: 6rem;
+            @include min-sm {
+                display: flex;
+                justify-content: space-between;
+                top: 9rem;
+            }
+        }
+    }
+
+    &__sticky-location {
+        padding: 1rem 0 2rem 0;
+
+        @include min-sm {
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+        }
+
+        h2 {
+            margin-bottom: 1.4rem;
+        }
+        
+        &__content {
+            @include min-sm {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        &__address {
+            margin-bottom: .6rem;
+
+            span {
+                display: block;
+                color: $text-color-gray-11;
+                font-size: 1.6rem;
+                line-height: 2rem;
+
+                @include min-sm {
+                    display: inline-block;
+                    @include typography($font-main, $fontweight-regular, 1.8rem, 2.4rem);
+                }
+            }
+        }
+
+        &__shortlisted {
+            span:first-child {
+                margin-right: .5rem;
+                color: $text-color-gray-blur;
+                line-height: 1.44;
+                font-size: 1.6rem;
+            }
+        }
+
+        .for-shortlist-icon {
+            position: relative;
+            left: 0;
+            top: 0;
+            font-weight: 700;
+        }
+    }
+
+    .unit-sibling {
+        flex: 1;
+        border-right: solid 1px $border-color-gray-22;
+        border-bottom: .3rem solid $border-color-gray-22;
+        cursor: pointer;
+
+        @include min-sm {
+            flex: initial;
+            border-right: none;
+            border-bottom: .9rem solid transparent;
+        }
+
+        &:last-of-type {
+            border-right: none;
+        }
+
+        &:hover,
+        &.current-unit {
+            border-bottom-color: $border-color-blue-13;
+
+            .unit-detail__info__room-info,
+            sup,
+            .unit-detail__info__room-price {
+                color: $text-color-blue-13;
+            }
+
+            @include min-sm {
+                border-bottom-color: $border-color-blue;
+            }
+        }
+
+        &.current-unit {
+            cursor: default;
+        }
+    }
+
+    .unit-detail__info {
+        text-align: center;
+        padding: 1rem .3rem;
+        display: flex;
+        flex-direction: column;
+
+        @include min-sm {
+            padding: 1rem 2rem;
+        }
+
+        &__room-info {
+            color: $text-color-gray-24;
+            @include typography($font-main, $fontweight-bold, 1.2rem, 2.3rem);
+
+            @include min-sm {
+                font-size: 2.2rem;
+                margin-bottom: .5rem;
+            }
+        }
+
+        p {
+            @include min-sm {
+                display: flex;
+            }
+        }
+
+        sup {
+            color: $text-color-gray-24;
+            @include typography($font-main, $fontweight-bold, .9rem, 0);
+
+            @include min-sm {
+                font-size: 1.65rem;
+            }
+        }
+
+        &__room-price {
+            color: $text-color-gray-24;
+            margin-bottom: 0;
+            @include typography($font-main, $fontweight-regular, .9rem, 1rem);
+
+            @include min-sm {
+                @include typography($font-main, $fontweight-regular, 1.6rem, 2.3rem);
+            }
+        }
+    }
+}

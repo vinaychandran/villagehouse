@@ -1,0 +1,118 @@
+.filter-dropdown {
+    padding: 1.8rem 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    order: 2;
+
+    @include min-md {
+        padding-top: 0;
+        flex-wrap: nowrap;
+        order: 1;
+    }
+
+    &__wrapper {
+        width: 50%;
+        padding: .5rem;
+        margin-bottom: .5rem;
+        position: relative;
+
+        @include min-md {
+            width: auto;
+            padding: 0 .2rem;
+            margin-bottom: 0;
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+
+        &.open-dropdown {
+            ul.filter-dropdown__list {
+                display: block;
+            }
+        }
+
+        &.has-value {
+            button {
+                color: $text-color-secondary;
+                background-color: $border-color-gray-16;
+                border-color: $border-color-gray-16;
+            }
+        }
+    }
+
+    &__btn {
+        padding: .8rem .5rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        border: .2rem solid $border-color-gray-14;
+        border-radius: 2.4rem;
+        color: $text-color-gray-15;
+        font-weight: $fontweight-light;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        background-color: $bg-color-primary-white;
+
+        @include min-md {
+            padding: .9rem 2.5rem;
+        }
+
+        &:hover {
+            background-color: $bg-color-white-blur;
+            color: $text-color-black;
+        }
+
+        .icon-arrow {
+            margin-left: .5rem;
+            font-weight: $fontweight-heavy;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 110%;
+        // transform: translateX(-50%);
+        padding: .5rem 0 1rem;
+        min-width: 13.5rem;
+        width: max-content;
+        font-size: 1.4rem;
+        border: .1rem solid rgba(0,0,0,.15);
+        border-radius: .4rem;
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        background-color: $bg-color-primary-white;
+        z-index: 10;
+        
+        li {
+            padding: 0 2.5rem 0 1.3rem;
+            margin-bottom: .5rem;
+
+            a {
+                line-height: 1.42857143;
+                font-weight: $fontweight-regular;
+                white-space: nowrap;
+                color: $text-color-black;
+                display: block;
+                font-size: 1.4rem;
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                white-space: nowrap;
+
+                &:hover {
+                    color: color(c-blue-11);
+                }
+            }
+
+            input[type="checkbox"] {
+                margin-right: .6rem;
+            }
+        }
+    }
+}

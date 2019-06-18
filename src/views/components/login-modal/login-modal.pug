@@ -1,0 +1,25 @@
+.modal.micromodal-slide.modal--form-primary.modal-phone__callback#modalLogin(aria-hidden="true")
+    .modal__overlay.modal__container--login.modal__container--login-with-header(tabindex="-1", data-micromodal-close)
+        .modal__header
+            .icon-close(data-micromodal-close, aria-label="Close this dialog window")
+        .modal__container(role="dialog", aria-modal="true", aria-labelledby="modal-callback-form-title")
+            .modal__header--with-image
+                .modal__header--with-image__logo-block
+                    a(href="javascript:void(0)")
+                        img(src="/assets/images/logo-header-white.svg", alt="logo")
+            .modal__content
+                .form--wrapper
+                    form(method="post", name="loginForm", showvalid)
+                        h3.form__title ログイン
+                        .form__sub-title ビレッジハウスから送られた書類番号、並びに登録している電話番号を入力ください
+                        fieldset
+                            .field--wrapper.form-group
+                                input.form-control(type="text", name="loginAppNumber", placeholder="Application Number", required)
+                            .field--wrapper.form-group
+                                input.form-control(type="text", name="loginPhoneNumber", placeholder="Phone Number", phoneRegex)
+                            .field--wrapper.form-group
+                                input.form-control(type="text", name="loginName", placeholder="Name in Katakana", twoByteRegex)
+                            .field--wrapper.form-group
+                                input.form-control(type="text", name="loginDateOfBirth", placeholder="Birthday in Zenkaku", twoByteRegex)
+                            .field--wrapper.form__submit-btn
+                                button.modal--btn-login(type="submit", name="submitLoginModal", aria-label="Submit Login form") ログイン 口座情報確認へ進む            

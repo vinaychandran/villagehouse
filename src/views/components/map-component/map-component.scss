@@ -1,0 +1,338 @@
+.map-component {
+	// display: none;
+	opacity: 0;
+	visibility: hidden;
+    position: relative;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100% - 6rem);
+    transition: all .5s ease-in-out;
+    z-index: -1;
+
+    &.full-width {
+		opacity: 1;
+		visibility: visible;
+        width: 100%;
+        display: block;
+        z-index: 9;
+    }
+
+    @include min-md {
+        width: 55%;
+        display: block;
+        position: relative;
+        height: 100%;
+		opacity: 1;
+        visibility: visible;
+        z-index: 1;
+    }
+
+    &__switch-container {
+		display: none;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        background-color: color(c-white);
+        z-index: 9;
+        border-radius: 1rem;
+		border: 1px solid color(c-gray-17);
+		
+		@include min-md {
+			display: flex;
+		}
+
+        &__btn {
+            font-size: 1.6rem;
+            font-weight: bold;
+            padding: 1rem 2rem 1rem 2.4rem;
+            text-align: center;
+            color: color(c-gray-18);
+            background-repeat: no-repeat;
+            background-size: 1.6rem;
+            transition: all 0.2s ease-in-out;
+            user-select: none;
+            background-position: 1.2rem center;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            &:before {
+                content: '';
+                margin-right: 5px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            &:hover {
+                color: $text-color-primary;
+            }
+        }
+
+        &__btn--toggle-result {
+            color: $text-color-primary;
+            &:before {
+                width: 19px;
+                height: 15px;
+                background-image: url('../images/result-icon-active.png');
+            }
+
+            &.in-active {
+                color: color(c-gray-18);
+                &:before {
+                    background-image: url('../images/result-icon.png');
+                }
+            }
+
+            &:hover {
+                color: $text-color-primary;
+                &:before {
+                    background-image: url('../images/result-icon-active.png');
+                }
+            }
+        }
+
+        &__btn--toggle-map {
+            color: $text-color-primary;
+            &:before {
+                width: 18px;
+                height: 18px;
+                background-image: url('../images/result-icon-active.png');
+            }
+
+            &.in-active {
+                color: color(c-gray-18);
+                &:before {
+                    background-image: url('../images/map-icon.png');   
+                }                
+            }
+
+            &:hover {
+                color: $text-color-primary;
+                &:before {
+                    background-image: url('../images/map-icon-active.png');
+                }				
+            }
+
+            &:after {
+                content: '';
+                height: 3rem;
+                width: .2rem;
+                background-color: color(c-white-blur-7);
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    &__map-container {
+        #whiteBar {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: white;
+            height: 70rem;
+            width: 3rem;
+            opacity: 0.6;
+            transition: 0.5s;
+            box-shadow: rgba(0, 0, 0, 0.7) .4rem .1rem .6rem -.3rem;
+            z-index: 2;
+
+            @include min-md {
+                display: block;
+            }
+        }
+
+        .ic-arrow {
+			display: none;
+            opacity: 1;
+            visibility: visible;
+            width: 2rem;
+            height: 2rem;
+            z-index: 2;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: .5rem;
+			transform: translateY(-50%);
+			transition: all 0.5s ease-in-out;
+
+            &.in-active {
+                opacity: 0;
+                visibility: hidden;
+			}
+			
+			@include min-md {
+				display: block;
+			}
+        }
+    }
+}
+
+#map {
+    position: absolute !important;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include min-md {
+        position: relative !important;
+        height: 70rem;
+    }
+
+    .gm-style-iw-c{
+        padding-right: 1.2rem !important;
+        padding-bottom: 1.2rem !important;
+        border-radius: 0.3rem;
+    }
+
+    .gm-style-iw-d{
+        overflow: auto !important;
+    }
+
+    .geo-pin-bubble {
+        float: left;
+        padding: 0;
+        margin: 0;
+        height: 24.5rem;
+        width: 17.3rem;
+
+        .geo-marker-thumb {
+            height: 13.5rem;
+            width: 100%;
+            float: left;
+            clear: both;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('../images/map-no-image.jpg');
+        }
+
+        h2 {
+            float: left;
+            width: 100%;
+            @include typography(fonts(main), fontWeight(bold), 1.6rem, 2rem);
+            color: $text-color-gray-2;
+            margin: 0;
+            position: absolute;
+            bottom: 9.5rem;
+            white-space: pre;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-align: center;
+            left: 0;
+        }
+
+        strong {
+            bottom: 5.4rem;
+            position: absolute;
+            left: 0;
+            right: 0;
+            text-align: center;
+            @include typography(fonts(main), fontWeight(regular), 1.2rem, normal);
+            color: color(c-gray-19);
+        }
+
+        address {
+            position: absolute;
+            bottom: 7.3rem;
+            margin-bottom: 0;
+            color: color(c-gray-20);
+            @include typography(fonts(main), fontWeight(bold), 1.4rem, normal);
+            width: 100%;
+            white-space: nowrap;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-style: normal;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .property-details {
+            float: left;
+            position: absolute;
+            bottom: 1.2rem;
+            left: 1.2rem;
+            right: 1.2rem;
+            text-align: center;
+            background-color: color(c-blue-11);
+            color: color(c-white);
+            border-radius: 2.5rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 1.1rem;
+            user-select: none;
+            transition: all 0.2s ease-in-out;
+
+            &:hover{
+                background: color(c-blue-12);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.switch-container-mobile {
+    @extend .map-component__switch-container;
+    position: fixed;
+    top: auto;
+    border-radius: 2.5rem;
+    bottom: 2rem;
+    left: 50%;
+    right: initial;
+    transform: translateX(-50%);
+	box-shadow: 0 .2rem 1.3rem .1rem rgba(27, 27, 27, 0.36);
+	border: .2rem solid color(c-gray-blur-3);
+	display: inline-flex;
+
+	@include min-md {
+		display: none;
+	}
+
+    &__btn {
+        @extend .map-component__switch-container__btn;
+		&.in-active {
+			&:hover, &:focus {
+				color: $text-color-primary;
+			}
+		}
+    }
+
+    &__btn--toggle-result {
+        @extend .map-component__switch-container__btn--toggle-result;
+
+        &.in-active {
+            color: color(c-gray-blur);
+        }
+    }
+
+    &__btn--toggle-map {
+        @extend .map-component__switch-container__btn--toggle-map;
+		
+        &:after {
+			height: 100%; 
+			background-color: color(c-gray-blur-3);
+        }
+
+        &.in-active {
+            color: color(c-gray-blur);
+        }
+    }
+}
+
+html[lang="pt"] .switch-container-mobile {
+    max-width: 26.5rem;
+    &__btn {
+        &--toggle-result {
+            width: 63%;
+        }
+    }
+}

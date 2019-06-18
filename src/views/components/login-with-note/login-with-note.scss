@@ -1,0 +1,508 @@
+.form-login {
+    margin: 60px 0;
+    display: inline-block;
+    .top-header {
+        position: relative;
+        background-color: color(c-blue);
+        text-align: center;
+        margin-left: -15px;
+        margin-right: -15px;
+        @include min-sm {
+            position: relative;
+            background-color: #0089ce;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            min-height: 55px;
+        }
+        span.right {
+            display: none;
+
+            @include min-sm {
+                display: inline-block;
+                font-size: 1.1rem;
+                max-height: 55px;
+                line-height: 55px;
+                font-weight: $fontweight-medium;
+                color: color(c-white);
+            }
+        }
+        .header__view-request {
+            display: block;
+            padding: 0.9rem 0 1rem 0;
+            img {
+                height: 3rem;
+            }
+        }
+        span.mid {
+            font-family: $font-main;
+            font-size: 1.8rem;
+            font-weight: $fontweight-bold;
+            line-height: 1.33;
+            color: color(c-white);
+            padding: 0 4rem 0.9rem 4rem;
+            display: inline-block;
+            @include min-sm {
+                font-size: 1.6rem;
+                max-height: 55px;
+                line-height: 55px;
+                letter-spacing: 0.6px;
+            }
+        }
+        button {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            z-index: 1;
+            background: none;
+            border: none;
+            span.icon-close {
+                font-size: 2rem;
+                color: color(c-white);            
+            }
+            @include min-sm {
+                position: unset;
+            }
+        }
+    }
+    .content {
+        width: 80%;
+        margin: auto;
+        .note {
+            display: none;
+            text-align: center;
+            position: relative;
+            border: 1px solid color(c-blue);
+            @include min-sm {
+                display: block;
+                margin-top: 47px;
+            }
+            span {
+                display: inline-block;
+                font-size: 1.3rem;
+                font-weight: $fontweight-bold;
+                color: color(c-white-blur-9);
+                background: color(c-blue);
+                padding: 3px 12px;
+                position: absolute;
+                top: -15px;
+                left: 50%;
+                z-index: 1;
+                transform: translateX(-50%);
+            }
+            p {
+                font-size: 1.3rem;
+                font-weight: $fontweight-medium;
+                color: color(c-blue-14);
+                text-align: left;
+                line-height: 1.38;
+                padding: 22px;
+            }
+            h3 {
+                margin: 0;
+                font-size: 1.4rem;
+                font-weight: $fontweight-medium;
+                letter-spacing: -0.2px;
+                text-align: center;
+                color: color(c-blue);
+                line-height: 1.43;
+            }
+        }
+        h3 {
+            margin: 0;
+            font-size: 1.4rem;
+            font-weight: $fontweight-medium;
+            letter-spacing: -0.2px;
+            text-align: center;
+            color: color(c-blue);
+            line-height: 1.43;
+            margin: 15px 0 20px 0;
+        }
+        .progessbar {
+            ul {
+                li.step.active {
+                    &:before {
+                        content:'';
+                        width: 32px;    
+                        height: 32px;
+                        background: color(c-blue);
+                        line-height: 32px;
+                        transform: translateX(-6px);
+                        top: 1px;
+                    }
+                    a.note-step {
+                        font-size: 2rem ;
+                        font-weight: bold;
+                        line-height: 1.7;
+                        color: color(c-dark-blue);
+                        margin-left: 0;
+                    }
+                    @include min-sm {
+                        &:before { 
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                        }
+                        a.note-step { 
+                            font-size: 1.4rem;
+                            display: inline-block;
+                            transform: translateX(-14px) translateY(48px);
+                        }
+                    }
+                }
+                li.step.complete {
+                    &:before {
+                        background: color(c-blue);
+                    }
+                    a.note-step { 
+                        font-size: 1.4rem ;
+                        font-weight: bold;
+                        line-height: 1.7;
+                        color: color(c-dark-blue);
+                    }
+                    @include min-sm {
+                        &:before {
+                            right: 0;
+                            left: unset;
+                            top: 11px;
+                        }
+                        a.note-step { 
+                            display: block;
+                            transform: translateX(0%) translateY(10px);
+                            text-align: right;
+                        }
+                        a.number-step {
+                            text-align: right;
+                            transform: translateY(-20px) translateX(3%);
+                            display: block;
+                        }
+                    }
+                }
+                li.step {
+                    position: relative;
+                    margin-bottom: 25px;
+                    padding-left: 40px;
+                    @include min-sm {
+                        width: 25%;
+                        float: left;
+                        margin-bottom: 0;
+                        padding-left: 0;
+                    }
+                    &:first-child {
+                        &:before {
+                            content: '1';
+                        }  
+                        &:after {
+                            content: none;
+                        }
+                    }
+                    &:before {
+                        width: 19px;
+                        height: 19px;
+                        content: '';
+                        border: 1px solid color(c-dark-blue);
+                        background: color(c-orange);
+                        color: color(c-white);
+                        border-radius: 50%;
+                        line-height: 19px;
+                        display: inline-block;
+                        text-align: center;
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        position: absolute;
+                        top:4px;
+                        left: 0;
+                        z-index: 1;
+                        @include min-sm {
+                            top: 11px;
+                        }
+                    }
+                    &:after {
+                        width: 3px;
+                        height: 30px;
+                        content:'';
+                        position: absolute;
+                        top: -25px;
+                        left: 9px;
+                        z-index: -1;
+                        background: #615f5f;
+                        @include min-sm {
+                            width: 171%;
+                            height: 3px;
+                            top: 21px;
+                            left: -81%;
+                        }
+                    }
+                    a.note-step {
+                        font-size: 1.4rem;
+                        font-weight: $fontweight-bold;
+                        line-height: 1.4;
+                        text-align: left;
+                        color: color(c-orange);
+                        margin-left: 12px;
+                        @include min-sm {
+                            display: block;
+                            margin-left: 0;
+                        }
+                    }
+                    a.number-step {
+                        font-size: 1.2rem;
+                        font-weight: $fontweight-bold;
+                        color: color(c-dark-blue);
+                    }
+                    &:nth-child(2) {
+                        @include min-sm {
+                            &:before {
+                                left: 38%;
+                            }
+                            a.number-step {
+                                text-align: left;
+                                transform: translateY(-20px) translateX(33%);
+                                display: block;
+                            }
+                            a.note-step { 
+                                text-align: left;
+                                transform: translateY(15px) translateX(0%);
+                            }
+                        }
+                    }
+                    &:nth-child(3) {
+                        @include min-sm {
+                            &:before {
+                                left: 51%;
+                            }
+                            a.number-step {
+                                text-align: left;
+                                transform: translateY(-20px) translateX(45%);
+                                display: block;
+                            }
+                            a.note-step { 
+                                text-align: left;
+                                transform: translateY(15px) translateX(11%);
+                            }
+                        }
+                    }
+                }
+            }
+            p.description-mobile {
+                font-size: 1rem;
+                font-weight: $fontweight-bold;
+                color: color(c-orange);
+                line-height: 1.1;
+                position: absolute;
+                top: 22px;
+                z-index: 1;
+                @include min-sm {
+                    display: none;
+                }
+            }
+            p.description-desk {
+                font-size: 1rem;
+                font-weight: $fontweight-bold;
+                color: color(c-orange);
+                line-height: 1.1;
+                display: none;
+                @include min-sm {
+                    display: inline-block;
+                    clear: both;
+                    margin-top: 30px;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+        .form-information {
+            margin-top: 20px;
+            background: color(c-gray-26);
+            padding-bottom: 20px;
+            .top-header {
+                min-height: 38px;
+                margin-left: 0;
+                margin-right: 0;
+                span {
+                    font-size: 1.7rem;
+                    font-weight: $fontweight-bold;
+                    color: color(c-white);
+                    line-height: 38px;
+                    text-align: center;
+                }
+            }
+            h3 {
+                color: color(c-dark-blue);
+                font-size: 1.2rem;
+                font-weight: $fontweight-bold;
+                padding: 0 21px;
+            }
+            form {
+                padding: 0 18px;
+                @include min-sm {
+                    .form-group.last-form {
+                        input.form-control {
+                            display: none;
+                        }
+                    }
+                }
+                .form-group {
+                    margin-bottom: 13px;
+                    clear: both;
+                    input.form-control {
+                        display: block;
+                        width: 100%;
+                        min-height: 45px;
+                        border-radius: 4px;
+                        border: 1px solid rgba(204, 204, 204, 0.87);
+                        margin-top: 10px;
+                        &::placeholder {
+                            color: #aaaaaa;
+                            font-size: 1.4rem;
+                            font-weight: $fontweight-medium;
+                            line-height: 1.71;
+                            letter-spacing: 0.7px;
+                            text-align: left;
+                            padding-left: 13px;
+                        }
+                    }
+                    label {
+                        font-size: 1.4rem;
+                        font-weight: $fontweight-bold !important;
+                        line-height: 1.71;
+                        text-align: left;
+                        color: color(c-dark-blue);
+                        margin-right: 10px;
+                    }
+                    span {
+                        font-size: 0.9rem;
+                        font-weight: $fontweight-medium;
+                        line-height: 1.78;
+                        color: color(c-dark-blue);
+                        text-align: left;
+                        display: inline-block;
+                    }
+                    @include min-sm {
+                        min-height: 45px;
+                        .group-label {
+                            width: 20%;
+                            float: left;
+                            label {
+                                display: block;
+                                margin-right: 0;
+                                margin-bottom: -8px;
+                            }
+                        }
+                        input.form-control {
+                            width: 80%;
+                            float: left;
+                            margin-top: 0;
+                        }
+                    }
+                    .group-controls {
+                        display: flex;
+                        width: 100%;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin-top: 10px;
+                        @include min-sm {
+                            width: 80%;
+                            float: left;
+                            margin-top: 0px;
+                        }
+                        select {
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                        }
+                        .calendar-item {
+                            position: relative;
+                            border: 1px solid rgba(204, 204, 204, 0.87);
+                            width: 32%;
+                            border-radius: 4px;
+                            text-align: center;
+                            background: color(c-white);
+                            min-height: 35px;
+                            line-height: 35px;
+                            display: inline-block;
+                            span.increase {
+                                position: absolute;
+                                top: 10px;
+                                right: 6px;
+                                z-index: 1;
+                                width: 0;
+                                height: 0;
+                                border-left: 4px solid transparent;
+                                border-right: 4px solid transparent;
+                                border-bottom: 5px solid #9d9c9c;
+                                // margin-left: 10px;
+                                // font-size: 1.5rem;
+                            }
+                            span.decrease {
+                                position: absolute;
+                                bottom: 10px;
+                                right: 6px;
+                                z-index: 1;
+                                width: 0;
+                                height: 0;
+                                border-left: 4px solid transparent;
+                                border-right: 4px solid transparent;
+                                border-top: 5px solid #9d9c9c;   
+                                // margin-left: 10px;
+                                // font-size: 1.5rem;                         
+                            }
+                            select {
+                                font-size: 1.4rem;
+                                font-weight: $fontweight-bold;
+                                line-height: 1.71;
+                                color: color(c-dark-blue);
+                                border: none;
+                            }
+                        }
+                    }
+                }
+                a {
+                    font-size: 1.1rem;
+                    font-weight: $fontweight-medium;
+                    line-height: 1.73;
+                    text-align: center;
+                    display: block;
+                    color: color(c-dark-blue);
+                    text-decoration: underline;
+                    margin: 25px 0;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                .form-note {
+                    background: color(c-yellow);
+                    padding: 14px 56px;
+                    border-radius: 8px;
+                    p {
+                        font-size: 1.5rem;
+                        font-weight: $fontweight-bold;
+                        color: color(c-black-6);
+                        line-height: 1.2;
+                        text-align: center;
+                    }
+                    span {
+                        font-size: 1.2rem;
+                        font-weight: $fontweight-bold;
+                        line-height: 1.67;
+                        color: color(c-black-7);
+                        text-align: center;
+                        display: block;
+                    }
+                }
+                .bottom {
+                    margin-top: 42px;
+                    p {
+                        font-size: 1.1rem;
+                        font-weight: $fontweight-medium;
+                        color: color(c-dark-blue);
+                        text-align: center;
+                        line-height: 1.82;
+                    }
+                }
+            }
+        }
+    }
+}

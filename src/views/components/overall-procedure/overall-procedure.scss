@@ -1,0 +1,84 @@
+.overall-procedure {
+    margin-bottom: 8.0rem;
+
+    &__body {
+        margin-bottom: 3.0rem;
+    }
+
+    &__title {
+        color: color(c-blue);
+        text-align: center;
+        font-size: 4.2rem;
+    }
+
+    &__support {
+        background-color: color(c-yellow);
+        color: color(c-black);
+        text-align: center;
+        padding: 1.5rem;
+        position: relative;
+
+        &:after {
+            height: 4.0rem;
+            bottom: -4.0rem;
+            content: "";
+            display: block;
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            width: 100%;
+            background-image: linear-gradient(to top right, transparent 50%, #F8B62D 50%),
+            linear-gradient(to top left, transparent 50%, #F8B62D 50%);
+            background-size: 50.2% 100%;
+            background-repeat: no-repeat;
+            background-position: top left,
+            top right;
+        }
+
+        &__title {
+            font-size: 3.8rem;
+            line-height: 4.8rem;
+            font-family: $font-main;
+            font-weight: 600;
+            margin-top: 2.0rem;
+
+            @include mobile {
+                font-size: 3.2rem;
+            }
+        }
+    }
+}
+
+.procedure-step {
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__img {
+        margin: 0 auto;
+    }
+
+    &__detail {
+        @include mobile {
+            text-align: center;
+        }
+        &__title {
+            font-family: $font-main;
+            font-size: 2.4rem;
+            font-weight: 500;
+            line-height: 1.1;
+            color: color(c-blue);
+            margin-bottom: 1.0rem;
+            margin-top: 2.0rem;
+        }
+    }
+}
+
+.procedure-break-line {
+    margin: 4.0rem 0;
+
+    img {
+        width: 100%;
+    }
+}

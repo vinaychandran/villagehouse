@@ -1,0 +1,37 @@
+.modal__overlay--promote{
+    align-items: center !important;
+    flex-direction: column;
+
+    .modal__header--promote {
+        padding: 0 0 .7rem;
+        width: 60rem;
+        @include mobile {
+            width: 95%;
+        }
+    }
+
+    .modal__container--promote{
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+        @include mobile{
+            height: auto;
+            width: 95%;
+        }
+        .modal__header{
+            position: absolute;
+            right: 0;
+            top: 1em;
+        }
+        .modal__content{
+            padding: 0 !important;
+        }
+        .promote__image-wrapper{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+

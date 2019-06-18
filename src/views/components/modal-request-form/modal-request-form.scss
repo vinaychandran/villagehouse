@@ -1,0 +1,27 @@
+.form__title {
+    padding-bottom: unset !important;
+    margin: 0 0 1rem !important;
+    &:after {
+        display: none;
+    }
+}
+
+.form__sub-title{
+    font-size: 1.6rem;
+    line-height: 3.1rem;
+    color: #fff;
+    padding-bottom: 2.2rem;
+    margin: 0 0 3.1rem;
+    text-align: center;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        height: 3px;
+        width: 50px;
+        background-color: color(c-yellow);
+    }
+}

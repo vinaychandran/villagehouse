@@ -1,0 +1,349 @@
+.modal--search {
+    &__overlay {
+        align-items: flex-start;
+        padding: 13rem 1rem 1rem 1rem;
+        overflow: auto;
+    }
+
+    &__container {
+        width: 100%;
+        padding: 1rem 0 0 0;
+        max-width: initial;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include min-sm {
+            width: 60rem;
+        }
+
+        @include min-md {
+            width: 90rem;
+        }
+
+        &__loading-area {
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        &.is-level1 {
+            .modal--search__content {
+                padding-right: 0;
+                margin-right: 1rem;
+                @include min-md {
+                    width: 38%;
+                }
+            }
+            .modal--search__content li {
+                width: 50%;
+                @include min-md {
+                    width: 33%;
+                }
+            }
+
+            .modal--search__content li input,
+            .modal--search__content__title,
+            .modal--search__footer,
+            .modal--search__content__all-districts,
+            .modal--search__content__district-title {
+                display: none;
+            }
+        }
+
+        
+        &.is-level2 {
+            .modal--search__content {
+                width: 100%;
+            }
+            .modal--search__map {
+                display: none;
+            }
+            .modal--search__content li {
+                width: 50%;
+                @include min-md {
+                    width: 33.33%;
+                }
+            }
+
+            .modal--search__content li input,
+            .modal--search__footer,
+            .modal--search__content__district-title,
+            .modal--search-content__all-districts {
+                display: none;
+            }
+
+            .modal--search__content__title {
+                display: block;
+            }
+        }
+
+        &.is-level3,
+        &.is-level4 {
+            &.is-checked-done {
+                .modal--search__submit-btn {
+                    display: inline-flex;
+                }
+            }
+            .modal--search__content {
+                width: 100%;
+            }
+            .modal--search__map {
+                display: none;
+            }
+
+            .modal--search__content li {
+                width: 100%;
+                @include min-md {
+                    width: 33.33%;
+                }
+            }
+
+            .modal--search__content li input {
+                display: inline;
+            }
+
+            .modal--search__footer {
+                display: flex;
+            }
+            
+            .modal--search__content__title,
+            .modal--search__content__district-title,
+            .modal--search-content__all-district {
+                display: block;
+            }
+        }
+
+        &.is-level3 {
+            &.modal--search__container--trainline {
+                .modal--search__content li {
+                    width: 100%;
+                    @include min-md {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        &.is-still-loading {
+            .modal--search__container__loading-area {
+                opacity: 1;
+                visibility: visible;
+                position: relative;
+                height: 22rem;
+    
+                @include min-sm {
+                    height: 19rem;
+                }
+        
+                @include min-md {
+                    height: 47rem;
+                }
+            }
+
+            .modal--search__content {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                transition: all 0.3s ease;
+                top: 0;
+                left: 0;
+            }
+
+            .modal--search__map {
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                transition: all 0.3s ease;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    &__closeBtn {
+        position: absolute;
+        top: 1.3rem;
+        right: 1.3rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        cursor: pointer;
+        background-size: 4.5rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: $bg-color-blue-3;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4.1rem;
+        color: $bg-color-primary-white;
+        transition: all 0.2s ease-in-out;
+        z-index: 2;
+
+        &:hover {
+            background-color: transparent;
+            color: $btn-bg-color-primary;
+        }
+
+        .icon-modal-closeBtn {
+            font-size: 2.7rem;
+        }
+    }
+    &__header {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: .8rem 1.5rem;
+        font-size: 1.2rem;
+        line-height: 2.3rem;
+        background-color: $bg-color-white-blur-2;
+        margin-bottom: 2.5rem;
+
+        &__title > span {
+            font-weight: $fontweight-bold;
+            color: $btn-text-color-blue-navy-2;
+            margin-right: .8rem;
+        }
+
+        ul {
+            display: inline-flex;
+            li {
+                cursor: pointer;
+                color: $text-color-gray-blur-2;
+                margin-right: .5rem;
+                padding-left: 1.8rem;
+                position: relative;
+            }
+        }
+
+        span[class^="icon"] {
+            position: absolute;
+            left: -.3rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__content {
+        position: relative;
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        max-height: calc(100vh - 32rem);
+        overflow-y: auto;
+
+        .modal--search__submit-btn {
+            position: absolute;
+            top: .2rem;
+            right: 1.5rem;
+        }
+
+        &__district-title {
+            color: $text-color-dark-blue-navy-4;
+            font-size: 1.6rem;
+            padding: .5rem 0;
+            border-bottom: .1rem solid $border-color-gray-10;
+            margin: 1rem 0;
+        }
+
+        &__all-districts {
+            align-items: center;
+            padding: .2rem .4rem 1rem .4rem;
+            cursor: pointer;
+            color: $btn-text-color-blue-navy-3;
+            font-size: 1.4rem;
+            line-height: 2.3rem;
+
+            label {
+                position: relative;
+                top: -.1rem;
+            }
+
+            input + label {
+                padding-left: 1rem;
+            }
+        }
+
+        &__title {
+            color: $btn-text-color-blue-navy-2;
+            font-size: 2.4rem;
+            font-weight: $fontweight-bold;
+            margin-bottom: 1rem;
+        }
+
+        &__list-title {    
+            color: color(c-dark-blue-navy-4);
+            font-size: 1.6rem;
+            padding: .5rem 0;
+            border-bottom: .1rem solid color(c-gray-4);;
+            margin: 1rem 0;
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 50%;
+                padding: .2rem .4rem;
+                cursor: pointer;
+                color: $btn-text-color-blue-navy-3;
+                font-size: 1.4rem;
+                line-height: 2.3rem;
+            }
+
+            label {
+                position: relative;
+                top: -.1rem;
+            }
+
+            input + label {
+                padding-left: 1rem;
+            }
+
+            &__count {
+                color: $text-color-yellow-4;
+                margin-left: .4rem;
+            }
+        }
+    }
+    
+    &__map {
+        width: 60%;
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    &__footer {
+        width: 100%;
+        padding: 1.5rem;
+        border-top: 1px solid $border-color-gray-9;
+        justify-content: flex-end;
+    }
+
+    &__submit-btn {
+        display: none;
+        border-radius: .3rem;
+        padding: 1.1rem 3.5rem;
+        color: $bg-color-primary-white;
+        background-color: $btn-bg-color-blue-5;
+        border-color: $border-color-blue-6;
+        cursor: pointer;
+        white-space: nowrap;
+        @include typography($font-main, 500, 1.4rem, 1.9rem);
+        &:hover {
+            background-color: color(c-dark-blue-navy-7);
+            color: white;
+        }
+    }
+}
